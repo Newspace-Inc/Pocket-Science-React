@@ -6,9 +6,10 @@ Pocket Science hopes to help primary school students are struggling with remembe
 ## Installation
 App will be published to the Play Store soon
 
-## Credits
-https://github.com/Ethan-Chew
+## People who worked on this project
+[Ethan-Chew]()
 
-https://github.com/Existance29
+[Existance29]()
 
-https://github.com/Shanjiith-Pranov
+[Shanjiith-Pranov]()
+
