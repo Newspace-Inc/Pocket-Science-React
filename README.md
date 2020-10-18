@@ -11,7 +11,7 @@ App will be published to the Play Store <i>soon</i>
 - [React](https://reactjs.org)
 - [React Native](https://reactnative.dev)
 
-## People who worked on this project
+## People who contributed
 [Ethan-Chew](https://github.com/Ethan-Chew)
 
 [Existance29](https://github.com/Existance29)
