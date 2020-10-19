@@ -44,14 +44,16 @@ const data = require('../Data/MainData.json').mainData
           <View style={styles.rect2}></View>
         </View>
 
-        <ScrollView>
-          <View style={styles.yellowrec}>
+        <View style={styles.yellowrec}>
+          <ScrollView style = {styles.ScrollView}>
             <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
-            <Text style={styles.info}>{points}</Text>
-          
 
-          </View>
-        </ScrollView>
+            <Text style={styles.info}>{points}</Text>
+
+          </ScrollView>
+
+        </View>
+
       
       </View>
     );
