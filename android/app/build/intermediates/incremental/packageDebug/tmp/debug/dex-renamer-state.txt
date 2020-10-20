@@ -1,4 +1,7 @@
-#Tue Aug 25 09:51:44 SGT 2020
+#Tue Oct 20 13:25:27 SGT 2020
+base.1=/Users/brydonti/Documents/GitHub/Pocket-Science-React/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.1=classes.dex
 base.0=/Users/brydonti/AwesomeProject/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

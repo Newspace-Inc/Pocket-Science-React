@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/brydonti/AwesomeProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+            "outputFile": "/Users/brydonti/Documents/GitHub/Pocket-Science-React/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
             "map": [
                 {
                     "source": "/Users/brydonti/.gradle/caches/transforms-2/files-2.1/4f509a65121478d6153615d7ef5b7c5f/core-1.1.0/res/values-it/values-it.xml",

@@ -119,7 +119,7 @@ const data = require('../Data/MainData.json').mainData
         fontSize: 18,
         width: 300,
         height: 48,
-        marginTop: 15,
+        textAlign: "center",
         marginLeft: 39
       },
       info: {
