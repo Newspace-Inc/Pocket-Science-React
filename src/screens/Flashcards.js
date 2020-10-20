@@ -117,10 +117,10 @@ const data = require('../Data/MainData.json').mainData
         fontFamily: "roboto-regular",
         color: "#121212",
         fontSize: 18,
-        width: 300,
-        height: 48,
+        marginTop: 14,
         textAlign: "center",
-        marginLeft: 39
+        marginLeft: 10,
+        marginRight: 10
       },
       info: {
         
