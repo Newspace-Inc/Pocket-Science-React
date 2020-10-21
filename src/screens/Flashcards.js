@@ -117,10 +117,12 @@ const data = require('../Data/MainData.json').mainData
         fontFamily: "roboto-regular",
         color: "#121212",
         fontSize: 18,
-        marginTop: 14,
+        height: 80,
+        marginTop: 10,
         textAlign: "center",
-        marginLeft: 10,
-        marginRight: 10
+        marginLeft: 0,
+        marginRight: 0,
+       
       },
       info: {
         
@@ -128,17 +130,17 @@ const data = require('../Data/MainData.json').mainData
         fontFamily: "roboto-regular",
         color: "#121212",
         top: 50,
-        left: 10,
-        width: 360,
+        left: 5,
+        width: 350,
         height: 314,
         fontSize: 18,
       },
 
       ScrollView: {
-        top: 50,
-        left: 10,
+        top: 0,
+        left: 0,
         width: 390,
-        height: 700,
+        height: 7000,
         
 
       }
