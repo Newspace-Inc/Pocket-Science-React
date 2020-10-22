@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-const explaination = require('../Data/TopicExplaination.json')
-
+const explaination = require('../Data/TopicExplaination.json').Explaintions
+console.log(explaination[0][``])
 
 function TopicExplaination({navigation, route}) {
     const {PrimaryType} = route.params;
@@ -10,16 +10,17 @@ function TopicExplaination({navigation, route}) {
     let explainationID = 0;
     let explainationtext = "";
 
-  for (var i = 0; i < explaination.length; i++){
-    if (TopicName.toLowerCase() == explaination[i].toLowerCase()){
+  for (var i = 0; i < explaination.length-1; i++){
+    if (TopicName == explaination[i]){
       explainationID = i
+      
     }
 
   }
 
   for (var i = 1; i <= 3; i++){
     if (explaination[explainationID][`Point${i}`] != "Empty Cell"){
-      explainationtext += explaination[explainationID][`Point${i}`]
+      explainationtext += explaination[explainationID][`point${i}`]
     }
   }
   return (
@@ -63,9 +64,10 @@ const styles = StyleSheet.create({
   topicSelection2: {
     fontFamily: "roboto-regular",
     color: "rgba(67,67,67,1)",
-    top: 80,
+    top: 20,
     marginLeft: 20,
     fontSize: 18,
+    marginRight: 20,
     flex: 1
     
   },

@@ -1,5 +1,7 @@
-[{
-    "topic": "Systems",
+{ "Explaintions":[
+    
+    {
+   "topic": "Systems",
     "point1": "A system is made up of different parts that work together to perform a specific job or function.",
     "point2": "Every living thing is a system made up of many parts.",
     "point3": "Each part in a system has its own function(s). Different parts work together to enable the system to carry out its specific function.",
@@ -38,4 +40,7 @@
     "point4": "Mushroom2",
     "id": 6
     }
+
     ]
+
+}
