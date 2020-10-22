@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text,FlatList, TouchableOpacity, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Lesson } from "../../App";
 
 
@@ -33,9 +34,10 @@ const data = require('../Data/MainData.json').mainData
       
       
     }
+
+    console.log(points)
     return (
-      <View style={styles.container}>
-  
+      <View style = {styles.container}>
         <View style={styles.rect1Stack}>
           <View style={styles.rect1}>
           <Text style={styles.lowerPrimary}>{PrimaryType}</Text>
@@ -44,17 +46,19 @@ const data = require('../Data/MainData.json').mainData
           <View style={styles.rect2}></View>
         </View>
 
-        <View style={styles.yellowrec}>
-          <ScrollView style = {styles.ScrollView}>
+        
+
+        
+          
+        <ScrollView style = {styles.ScrollView}>
             <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
 
             <Text style={styles.info}>{points}</Text>
 
-          </ScrollView>
+        </ScrollView>
 
-        </View>
+       
 
-      
       </View>
     );
   }
@@ -110,7 +114,7 @@ const data = require('../Data/MainData.json').mainData
         height: 400,
         backgroundColor: "rgba(255,231,185,1)",
         marginTop: 0,
-        marginLeft: 10,
+        marginLeft: 20,
         marginRight: 10
       },
       conceptName: {
@@ -122,6 +126,7 @@ const data = require('../Data/MainData.json').mainData
         textAlign: "center",
         marginLeft: 0,
         marginRight: 0,
+        alignSelf: "center"
        
       },
       info: {
@@ -131,16 +136,20 @@ const data = require('../Data/MainData.json').mainData
         color: "#121212",
         top: 50,
         left: 5,
-        width: 350,
-        height: 314,
+        marginRight: 10,
         fontSize: 18,
+        marginLeft: 10,
       },
 
       ScrollView: {
         top: 0,
         left: 0,
-        width: 390,
+        marginRight: 10,
         height: 7000,
+        marginLeft: 10,
+        backgroundColor: "rgba(255,231,185,1)"
+        
+        
         
 
       }

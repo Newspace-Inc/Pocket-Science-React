@@ -1,12 +1,27 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-
+const explaination = require('../Data/TopicExplaination.json')
 
 
 function TopicExplaination({navigation, route}) {
     const {PrimaryType} = route.params;
     const {TopicName} = route.params;
+    let explainationID = 0;
+    let explainationtext = "";
+
+  for (var i = 0; i < explaination.length; i++){
+    if (TopicName.toLowerCase() == explaination[i].toLowerCase()){
+      explainationID = i
+    }
+
+  }
+
+  for (var i = 1; i <= 3; i++){
+    if (explaination[explainationID][`Point${i}`] != "Empty Cell"){
+      explainationtext += explaination[explainationID][`Point${i}`]
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.rect1Stack}>
@@ -18,7 +33,7 @@ function TopicExplaination({navigation, route}) {
         <View style={styles.rect2}></View>
       </View>
       <Text style={styles.topicSelection}>Explaination of the topic</Text>
-      <Text style={styles.topicSelection2}> PlaceHolderText here PlaceHolderText here </Text>
+      <Text style={styles.topicSelection2}> {explainationtext} </Text>
     </View>
   );
 }

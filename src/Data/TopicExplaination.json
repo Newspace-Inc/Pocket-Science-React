@@ -1,0 +1,41 @@
+[{
+    "topic": "Systems",
+    "point1": "A system is made up of different parts that work together to perform a specific job or function.",
+    "point2": "Every living thing is a system made up of many parts.",
+    "point3": "Each part in a system has its own function(s). Different parts work together to enable the system to carry out its specific function.",
+    "point4": "Human Breathing",
+    "id": 2
+    },
+    {
+    "topic": "Cycles",
+    "point1": "Cycles are events that repeat.",
+    "point2": "Some cycles are very simple and other cycles are very complicated.",
+    "point3": "A example of a cycle is the days of a week.",
+    "point4": "Water_Cycle",
+    "id": 3
+    },
+    {
+    "topic": "Interactions",
+    "point1": "Interaction is a kind of action that occurs as two or more objects have an effect upon one another.",
+    "point2": "Interaction is a cause and effect",
+    "point3": "Empty Cell",
+    "point4": "Magnets",
+    "id": 4
+    },
+    {
+    "topic": "Energy",
+    "point1": "Energy is the ability to do work, to make things happen and to cause changes.",
+    "point2": "Energy cannot be made or destroyed; it can only be changed into different forms.",
+    "point3": "Some examples of energy are sound, heat and light.",
+    "point4": "Sun",
+    "id": 5
+    },
+    {
+    "topic": "Diversity",
+    "point1": "There is a great variety of living and non-living things in the world",
+    "point2": "We organise this great variety of living and non-living things to better understand the world.",
+    "point3": "We group them by their different traits.",
+    "point4": "Mushroom2",
+    "id": 6
+    }
+    ]
