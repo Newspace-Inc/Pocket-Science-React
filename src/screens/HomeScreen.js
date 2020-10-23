@@ -5,10 +5,48 @@ import {
   Text,
   TouchableOpacity,
   Image,
-  ImageBackground
+  ImageBackground,
+  AsyncStorage
 } from "react-native";
 
 function HomeScreen({navigation}) {
+
+  let recentlyOpenedChapter;
+  var _storeData;
+  var _retrieveData;
+
+
+  
+  _storeData = async (key,obj) => {
+
+    let obj  = {primary: "Lower Primary", chapters: "4", colour: "rgba(125,207,182,1)"}
+    try {
+        await AsyncStorage.setItem(key, JSON.stringify(obj));
+    } catch (error) {
+        // Error saving data
+    }
+}
+  
+
+
+  
+    _retrieveData = async () => {
+      try {
+          const value = JSON.parse(await AsyncStorage.getItem("recentOpen"))
+          if (value !== null) {
+              // Our data is fetched successfully
+              recentlyOpenedChapter = value
+          }else{
+            recentlyOpenedChapter = {primary: "no recently opened topics", chapters:"", colour: ""}
+          }
+      } catch (error) {
+          // Error retrieving data
+      }
+      
+  
+  
+
+  }
   return (
     <View style={styles.container}>
       <View style={styles.rectStack}>
@@ -22,11 +60,15 @@ function HomeScreen({navigation}) {
         <View style={styles.rect2}></View>
         <Text style={styles.numberPoints}>Number Points</Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("TopicSelection",{
+          onPress={ () => this._storeDataUpper,navigation.navigate("TopicSelection",{
             PrimaryType: "Upper Primary" 
-          }
-          
-          )}
+
+           
+          },
+  
+          )
+        
+        }
           style={styles.button2}
 
           
@@ -36,15 +78,20 @@ function HomeScreen({navigation}) {
           
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("TopicSelection",{
+          onPress={() =>  navigation.navigate("TopicSelection",{
             PrimaryType: "Lower Primary"
+
+            //"rgba(239,219,150,1)"2
           }
           
-          )}
+          
+          )
+      
+      }
           style={styles.button}
         >
           <Text style={styles.lowerPrimary4}>Lower Primary</Text>
-          <Text style={styles.lowerPrimary5}>5 Chapters</Text>
+          <Text style={styles.lowerPrimary5}>4 Chapters</Text>
         </TouchableOpacity>
 
         <Image
@@ -64,7 +111,7 @@ function HomeScreen({navigation}) {
       </View>
       <View style={styles.rect6Stack}>
         <View style={styles.rect6}>
-          <Text style={styles.lowerPrimary}>Lower Primary</Text>
+        <Text style={styles.lowerPrimary}>lowerPrimary</Text>
         </View>
         <Text style={styles.name2}>5 Chapters</Text>
       </View>

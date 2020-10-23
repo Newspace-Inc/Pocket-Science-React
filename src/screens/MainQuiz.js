@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, AsyncStorage } from "react-native";
 import { Lesson } from "../../App";
 
 
@@ -9,6 +9,7 @@ function MainQuiz({navigation, route}) {
     console.log(network.params.params)
     const {PrimaryType} = network.params.params;
     const {TopicName} = network.params.params;
+    
   return (
     <View style={styles.container}>
       <View style={styles.rect1Stack}>
