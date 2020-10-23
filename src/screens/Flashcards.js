@@ -145,7 +145,7 @@ const data = require('../Data/MainData.json').mainData
         top: 0,
         left: 0,
         marginRight: 10,
-        height: 7000,
+        height: 400,
         marginLeft: 10,
         backgroundColor: "rgba(255,231,185,1)"
         

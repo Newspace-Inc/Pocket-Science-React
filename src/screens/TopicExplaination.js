@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 const explaination = require('../Data/TopicExplaination.json').Explaintions
-console.log(explaination[0][``])
+
 
 function TopicExplaination({navigation, route}) {
     const {PrimaryType} = route.params;
