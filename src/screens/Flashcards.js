@@ -34,7 +34,7 @@ const data = require('../Data/MainData.json').mainData
       
       
     }
-
+/*
     console.log(points)
     return (
       <View style = {styles.container}>
@@ -45,11 +45,6 @@ const data = require('../Data/MainData.json').mainData
           </View>
           <View style={styles.rect2}></View>
         </View>
-
-        
-
-        
-          
         <ScrollView style = {styles.ScrollView}>
             <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
 
@@ -62,7 +57,33 @@ const data = require('../Data/MainData.json').mainData
       </View>
     );
   }
-  
+  */
+
+ return (
+  <View style = {styles.container}>
+    <View style={styles.rect1Stack}>
+      <View style={styles.rect1}>
+      <Text style={styles.lowerPrimary}>{PrimaryType}</Text>
+      <Text style={styles.syllabus}>Primary School {TopicName}</Text>
+      </View>
+      <View style={styles.rect2}></View>
+    </View>
+
+    <View style = {styles.yellowrec}>
+      <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
+    </View>
+    <ScrollView 
+
+        style={styles.scrollView} 
+        contentContainerStyle={styles.contentContainer}
+      >
+        
+        <Text style={styles.paragraph}>{points}</Text>
+
+      </ScrollView>
+    </View>
+    );
+  }
   const styles = StyleSheet.create({
     container: {
       flex: 1
@@ -111,19 +132,19 @@ const data = require('../Data/MainData.json').mainData
     },
 
     yellowrec: {
-        height: 400,
+        height: 50,
         backgroundColor: "rgba(255,231,185,1)",
         marginTop: 0,
-        marginLeft: 20,
+        marginLeft: 10,
         marginRight: 10
       },
       conceptName: {
         fontFamily: "roboto-regular",
         color: "#121212",
         fontSize: 18,
-        height: 80,
         marginTop: 10,
         textAlign: "center",
+        fontWeight: 'bold',
         marginLeft: 0,
         marginRight: 0,
         alignSelf: "center"
@@ -141,7 +162,7 @@ const data = require('../Data/MainData.json').mainData
         marginLeft: 10,
       },
 
-      ScrollView: {
+      /*ScrollView: {
         top: 0,
         left: 0,
         marginRight: 10,
@@ -152,6 +173,25 @@ const data = require('../Data/MainData.json').mainData
         
         
 
+      },
+    */
+      paragraph: {
+        margin: 24,
+        fontSize: 18,
+        textAlign: 'left',
+      },
+      scrollView: {
+        height: '20%',
+        width: '95%',
+        marginLeft: 10,
+        marginRight: 10,
+        alignSelf: 'center',
+    
+        backgroundColor: "rgba(255,231,185,1)"
+      },
+      contentContainer: {
+        
+        paddingBottom: 10
       }
       
   
