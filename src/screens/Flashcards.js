@@ -28,6 +28,7 @@ const data = require('../Data/MainData.json').mainData
     }
 
     for (var i = 1; i <= 20; i++){
+      
       if (data[index[counter]][`point${i}`] != "Empty Cell"){
         points += `${data[index[counter]][`point${i}`]}\n\n`
       }

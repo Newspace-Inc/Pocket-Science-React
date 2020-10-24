@@ -11,16 +11,15 @@ import {
 
 function HomeScreen({navigation}) {
 
-  const [recentlyOpenedChapter, setData] =  useState();
-
+const [recentlyOpenedChapter, setData ] =  useState({});
 
 
   
-  const _storeData = async () => {
+  const _storeData = async (data) => {
 
     
     try {
-        await AsyncStorage.setItem("recentOpen", JSON.stringify(recentlyOpenedChapter));
+        await AsyncStorage.setItem("recentOpen", JSON.stringify(data));
 
         
     } catch (error) {
@@ -38,9 +37,11 @@ function HomeScreen({navigation}) {
           if (value !== null) {
               // Our data is fetched successfully
                setData(value)
+
+              
                
           }else{
-            setData( {primary: "no recently opened topics", chapters:"", colour: ""})
+            setData( {"primary": "no recently opened topics", "chapters":"", "colour":  "rgba(127,127,127,1)", "textcolour": "rgba(255,255,255,1)"})
           }
 
          
@@ -54,11 +55,21 @@ function HomeScreen({navigation}) {
   
 
   }
-  _retrieveData();
+
+  
+  useEffect(() => {
+    _retrieveData();
+  })
+    
+    
+
+  
+  
+
  
 
 
-  console.log(recentlyOpenedChapter)
+  
   return (
     <View style={styles.container}>
       <View style={styles.rectStack}>
@@ -72,15 +83,11 @@ function HomeScreen({navigation}) {
         <View style={styles.rect2}></View>
         <Text style={styles.numberPoints}>Number Points</Text>
         <TouchableOpacity
-          onPress={ () => this._storeDataUpper,navigation.navigate("TopicSelection",{
-            PrimaryType: "Upper Primary" 
+          onPress={() => _storeData({"chapters": "4", "colour": "rgba(239,219,150,1)", "primary": "Upper Primary","textcolour": "rgba(127,127,127,1)"}).then(
+          () => navigation.navigate("TopicSelection",{PrimaryType: "Upper Primary"})
+          )}
 
-           
-          },
-  
-          )
         
-        }
           style={styles.button2}
 
           
@@ -90,16 +97,14 @@ function HomeScreen({navigation}) {
           
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() =>  navigation.navigate("TopicSelection",{
+          onPress={()=> _storeData({"chapters": "4", "colour": "rgba(125,207,182,1)", "primary": "Lower Primary", "textcolour": "rgba(255,255,255,1)"}).then(() =>  navigation.navigate("TopicSelection",{
             PrimaryType: "Lower Primary"
 
             //"rgba(239,219,150,1)"2
-          }
-          
-          
-          )
+          })
       
-      }
+           ) }
+        
           style={styles.button}
         >
           <Text style={styles.lowerPrimary4}>Lower Primary</Text>
@@ -122,10 +127,22 @@ function HomeScreen({navigation}) {
         </ImageBackground>
       </View>
       <View style={styles.rect6Stack}>
-        <View style={styles.rect6}>
-    <Text style={styles.lowerPrimary}>{recentlyOpenedChapter.primary}</Text>
+        <View style={ {left: 0,
+                      height: 78,
+                      position: "absolute",
+                      backgroundColor: recentlyOpenedChapter.colour,
+                      borderRadius: 22,
+                      bottom: 9,
+                      right: 0,
+                      }}>
+
+    <Text style={{fontFamily: "roboto-700",fontSize: 23,height: 71, width: 187,marginTop: 7,marginLeft: 49,color: recentlyOpenedChapter.textcolour}}>
+      
+      {recentlyOpenedChapter.primary}</Text>
         </View>
-        <Text style={styles.name2}>5 Chapters</Text>
+    <Text style={{top: 49, left: 49,position: "absolute", fontFamily: "roboto-regular",fontSize: 20, height: 38, width: 274,color: recentlyOpenedChapter.textcolour}}>
+      
+      {recentlyOpenedChapter.chapters} Chapters</Text>
       </View>
       <Text style={styles.recentlyOpened}>Recently Opened</Text>
     </View>
@@ -133,6 +150,7 @@ function HomeScreen({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  
   container: {
     flex: 1
   },
@@ -270,13 +288,7 @@ const styles = StyleSheet.create({
     marginRight: -16
   },
   rect6: {
-    left: 0,
-    height: 78,
-    position: "absolute",
-    backgroundColor: "rgba(100,170,149,1)",
-    borderRadius: 22,
-    bottom: 9,
-    right: 0
+    
   },
   lowerPrimary: {
     fontFamily: "roboto-700",
@@ -292,10 +304,10 @@ const styles = StyleSheet.create({
     left: 49,
     position: "absolute",
     fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
+
     fontSize: 20,
     height: 38,
-    width: 274
+    width: 274,
   },
   rect6Stack: {
     height: 87,
