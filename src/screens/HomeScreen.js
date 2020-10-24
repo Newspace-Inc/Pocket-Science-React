@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import {
   StyleSheet,
   View,
@@ -11,17 +11,18 @@ import {
 
 function HomeScreen({navigation}) {
 
-  let recentlyOpenedChapter;
-  var _storeData;
-  var _retrieveData;
+  const [recentlyOpenedChapter, setData] =  useState();
+
 
 
   
-  _storeData = async (key,obj) => {
+  const _storeData = async () => {
 
-    let obj  = {primary: "Lower Primary", chapters: "4", colour: "rgba(125,207,182,1)"}
+    
     try {
-        await AsyncStorage.setItem(key, JSON.stringify(obj));
+        await AsyncStorage.setItem("recentOpen", JSON.stringify(recentlyOpenedChapter));
+
+        
     } catch (error) {
         // Error saving data
     }
@@ -30,16 +31,22 @@ function HomeScreen({navigation}) {
 
 
   
-    _retrieveData = async () => {
+   const _retrieveData = async () => {
       try {
           const value = JSON.parse(await AsyncStorage.getItem("recentOpen"))
+         
           if (value !== null) {
               // Our data is fetched successfully
-              recentlyOpenedChapter = value
+               setData(value)
+               
           }else{
-            recentlyOpenedChapter = {primary: "no recently opened topics", chapters:"", colour: ""}
+            setData( {primary: "no recently opened topics", chapters:"", colour: ""})
           }
+
+         
       } catch (error) {
+
+        
           // Error retrieving data
       }
       
@@ -47,6 +54,11 @@ function HomeScreen({navigation}) {
   
 
   }
+  _retrieveData();
+ 
+
+
+  console.log(recentlyOpenedChapter)
   return (
     <View style={styles.container}>
       <View style={styles.rectStack}>
@@ -111,7 +123,7 @@ function HomeScreen({navigation}) {
       </View>
       <View style={styles.rect6Stack}>
         <View style={styles.rect6}>
-        <Text style={styles.lowerPrimary}>lowerPrimary</Text>
+    <Text style={styles.lowerPrimary}>{recentlyOpenedChapter.primary}</Text>
         </View>
         <Text style={styles.name2}>5 Chapters</Text>
       </View>
