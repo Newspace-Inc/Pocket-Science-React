@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { StyleSheet, View, Text,FlatList, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Lesson } from "../../App";
-
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
 
 const data = require('../Data/MainData.json').mainData
@@ -19,6 +19,7 @@ const data = require('../Data/MainData.json').mainData
     const {Elements} = route.params.params;
     const {Chapter} = route.params.params;
     
+    
 
 
     for (var i = 0; i <= Elements.length-1; i++){
@@ -26,41 +27,46 @@ const data = require('../Data/MainData.json').mainData
         index.push(Elements[i])
       }
     }
-
+  function getpoint(countvar) {
     for (var i = 1; i <= 20; i++){
       
-      if (data[index[counter]][`point${i}`] != "Empty Cell"){
-        points += `${data[index[counter]][`point${i}`]}\n\n`
+      if (data[index[countvar]][`point${i}`] != "Empty Cell"){
+        points += `${data[index[countvar]][`point${i}`]}\n\n`
       }
       
       
     }
-/*
-    console.log(points)
-    return (
-      <View style = {styles.container}>
-        <View style={styles.rect1Stack}>
-          <View style={styles.rect1}>
-          <Text style={styles.lowerPrimary}>{PrimaryType}</Text>
-          <Text style={styles.syllabus}>Primary School {TopicName}</Text>
-          </View>
-          <View style={styles.rect2}></View>
-        </View>
-        <ScrollView style = {styles.ScrollView}>
-            <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
-
-            <Text style={styles.info}>{points}</Text>
-
-        </ScrollView>
-
-       
-
-      </View>
-    );
   }
-  */
+
+
+  getpoint(counter);
+
+  const [dataValue, setdataValue] = useState(points);
+
+  onSwipeLeft(gestureState){
+    getpoint(counter);
+
+    setdataValue(points);
+  }
+
+  const config = {
+    velocityThreshold: 0.3,
+    directionalOffsetThreshold: 80
+  };
 
  return (
+  <GestureRecognizer
+  onSwipe={(direction, state) => this.onSwipe(direction, state)}
+  onSwipeUp={(state) => this.onSwipeUp(state)}
+  onSwipeDown={(state) => this.onSwipeDown(state)}
+  onSwipeLeft={(state) => this.onSwipeLeft(state)}
+  onSwipeRight={(state) => this.onSwipeRight(state)}
+  config={config}
+  style={{
+    flex: 1,
+    backgroundColor: 'white'
+  }}
+  >
   <View style = {styles.container}>
     <View style={styles.rect1Stack}>
       <View style={styles.rect1}>
@@ -79,10 +85,11 @@ const data = require('../Data/MainData.json').mainData
         contentContainerStyle={styles.contentContainer}
       >
         
-        <Text style={styles.paragraph}>{points}</Text>
+        <Text style={styles.paragraph}>{dataValue}</Text>
 
       </ScrollView>
     </View>
+    </GestureRecognizer>
     );
   }
   const styles = StyleSheet.create({
