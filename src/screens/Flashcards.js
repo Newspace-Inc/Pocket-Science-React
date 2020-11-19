@@ -13,7 +13,7 @@ const data = require('../Data/MainData.json').mainData
   function Flashcards({route, navigation}) {
 
     let index = []
-    let counter = 0
+    const[counter, setCounter] = useState(0)
     let points = ""
     const { PrimaryType } = route.params.params;
     const {TopicName} = route.params.params;
@@ -28,7 +28,13 @@ const data = require('../Data/MainData.json').mainData
         index.push(Elements[i])
       }
     }
+  
+    //index is all concepts under a topic
+  
+  console.log(index)
+  
   function getpoint(countvar) {
+    points = ''
     for (var i = 1; i <= 20; i++){
       
       if (data[index[countvar]][`point${i}`] != "Empty Cell"){
@@ -43,11 +49,31 @@ const data = require('../Data/MainData.json').mainData
   getpoint(counter);
 
   const [dataValue, setdataValue] = useState(points);
+  const [conceptValue, setconceptValue] = useState(data[index[counter]].concepts);
 
-  onSwipeLeft(gestureState){
-    counter += 1;
+  const onSwipeLeft = (gestureState) => {
+    if (counter == index.length-1){
+      console.log("reset")
+      setCounter(0)
+    }else{
+      setCounter(counter+1)
+    }
+    console.log(counter)
     getpoint(counter);
+    setconceptValue(data[index[counter]].concepts);
+    setdataValue(points);
+  
+  }
 
+  const onSwipeRight = (gestureState) => {
+    if (counter == 0){
+      setCounter(index.length-1);
+    }else{
+      setCounter(counter-1);
+    }
+    console.log(counter)
+    getpoint(counter);
+    setconceptValue(data[index[counter]].concepts);
     setdataValue(points);
   
   }
@@ -55,21 +81,19 @@ const data = require('../Data/MainData.json').mainData
     velocityThreshold: 0.3,
     directionalOffsetThreshold: 80
   };
-}
+
 
  return (
+   
   <GestureRecognizer
-  onSwipe={(direction, state) => onSwipe(direction, state)}
-  onSwipeUp={(state) => onSwipeUp(state)}
-  onSwipeDown={(state) => onSwipeDown(state)}
-  onSwipeLeft={(state) => onSwipeLeft(state)}
-  onSwipeRight={(state) => onSwipeRight(state)}
-  config={config}
-  style={{
-    flex: 1,
-    backgroundColor: 'white'
-  }}
-  >
+      onSwipeLeft={(state) => onSwipeLeft(state)}
+      onSwipeRight={(state) => onSwipeRight(state)}
+      config={config}
+      style={{
+        flex: 1,
+        backgroundColor: 'white'
+      }}
+    >
   <View style = {styles.container}>
     <View style={styles.rect1Stack}>
       <View style={styles.rect1}>
@@ -80,7 +104,7 @@ const data = require('../Data/MainData.json').mainData
     </View>
 
     <View style = {styles.yellowrec}>
-      <Text style={styles.conceptName}>{data[index[counter]].concepts}</Text>
+      <Text style={styles.conceptName}>{conceptValue}</Text>
     </View>
     <ScrollView 
 
