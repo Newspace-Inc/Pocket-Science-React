@@ -1,3 +1,4 @@
+
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Text,FlatList, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -44,23 +45,25 @@ const data = require('../Data/MainData.json').mainData
   const [dataValue, setdataValue] = useState(points);
 
   onSwipeLeft(gestureState){
+    counter += 1;
     getpoint(counter);
 
     setdataValue(points);
+  
   }
-
   const config = {
     velocityThreshold: 0.3,
     directionalOffsetThreshold: 80
   };
+}
 
  return (
   <GestureRecognizer
-  onSwipe={(direction, state) => this.onSwipe(direction, state)}
-  onSwipeUp={(state) => this.onSwipeUp(state)}
-  onSwipeDown={(state) => this.onSwipeDown(state)}
-  onSwipeLeft={(state) => this.onSwipeLeft(state)}
-  onSwipeRight={(state) => this.onSwipeRight(state)}
+  onSwipe={(direction, state) => onSwipe(direction, state)}
+  onSwipeUp={(state) => onSwipeUp(state)}
+  onSwipeDown={(state) => onSwipeDown(state)}
+  onSwipeLeft={(state) => onSwipeLeft(state)}
+  onSwipeRight={(state) => onSwipeRight(state)}
   config={config}
   style={{
     flex: 1,
