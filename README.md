@@ -1,6 +1,6 @@
 # Pocket Science (React Native)
 
-Pocket Science hopes to help primary school students are struggling with remembering keywords for their science exams so therefore we decided to help them to study everything by consolidating the all keywords in one app sorted by chapters
+Pocket Science hopes to help primary school students are struggling with remembering keywords for their science exams. As such, we decided to help them study by consolidating the all keywords in one app sorted by chapters
 
 
 ## Installation
