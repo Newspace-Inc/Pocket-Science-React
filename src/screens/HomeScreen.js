@@ -50,26 +50,32 @@ useEffect(() => {
           <Text style={styles.welcomeTo}>Welcome to</Text>
           <Text style={styles.pocketScience}>Pocket Science,</Text>
           <Text style={styles.ethan}>Ethan</Text>
-          <View style={{width: 330,
-                        height: 144,
-                        backgroundColor: userData.colour,
-                        borderWidth: 0,
-                        borderColor: "#000000",
-                        borderRadius: 20,
-                        shadowColor: "rgba(0,0,0,1)",
-                        shadowOffset: {
-                          width: 2,
-                          height: 2
-                        },
-                        elevation: 9,
-                        shadowOpacity: 0.38,
-                        shadowRadius: 3,
-                        marginTop: 62,
-                        alignSelf: "center"}}>
+          <TouchableOpacity onPress = {() => navigation.navigate("Lessons",{
+      screen: 'TopicExplaination',
+      params: { PrimaryType: userData.primary, TopicName: userData.topic }
+      })}
+            style={{width: 330,
+                    height: 144,
+                    backgroundColor: userData.colour,
+                    borderWidth: 0,
+                    borderColor: "#000000",
+                    borderRadius: 20,
+                    shadowColor: "rgba(0,0,0,1)",
+                    shadowOffset: {
+                      width: 2,
+                      height: 2
+                    },
+                    elevation: 9,
+                    shadowOpacity: 0.38,
+                    shadowRadius: 3,
+                    marginTop: 62,
+                    alignSelf: "center"}}
+                    
+                    >
             <Text style={styles.lowerPrimary}>{userData.primary}</Text>
             <Text style={styles.diversity}>{userData.topic}</Text>
             <Text style={styles.recentlyOpened}>Recently Opened</Text>
-          </View>
+          </TouchableOpacity>
         </ImageBackground>
         <Text style={styles.loremIpsum}></Text>
       </View>
