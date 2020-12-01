@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ImageBackground } from "react-native";
 
 const explaination = require('../Data/TopicExplaination.json').Explaintions
 
@@ -23,19 +23,24 @@ function TopicExplaination({navigation, route}) {
       explainationtext += explaination[explainationID][`point${i}`]
     }
   }
-  return (
+  return(
     <View style={styles.container}>
-      <View style={styles.rect1Stack}>
-        <View style={styles.rect1}>
-          <Text style={styles.lowerPrimary2}>{PrimaryType}</Text>
-          <Text style={styles.lowerPrimary1}>Primary School {TopicName}</Text>
-        </View>
-
-        <View style={styles.rect2}></View>
-      </View>
-      <Text style={styles.topicSelection}>Explaination of the topic</Text>
-      <Text style={styles.topicSelection2}> {explainationtext} </Text>
+    <ImageBackground
+      source={require("../assets/images/image_ZzgH..png")}
+      resizeMode="contain"
+      style={styles.image1}
+      imageStyle={styles.image1_imageStyle}
+    >
+      <Text style={styles.diversity}>{TopicName}</Text>
+      <Text style={styles.upperPrimary5}>{PrimaryType} {TopicName}</Text>
+    </ImageBackground>
+    <View style={styles.loremIpsumStack}>
+      <Text style={styles.loremIpsum}></Text>
+      <Text style={styles.learningOutcomes}>Learning Outcomes</Text>
     </View>
+    <Text style={styles.placeholderTextLol}>{explainationtext}</Text>
+    <View style={styles.rect}></View>
+  </View>
   );
 }
 
@@ -43,66 +48,70 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  rect1: {
-    top: 0,
-    height: 207,
-    position: "absolute",
-    backgroundColor: "rgba(247,142,105,1)",
-    width: 400,
-    left: 3,
-    right: 4
+  image1: {
+    height: 157,
+    width: 403,
+    marginTop: -7,
+    marginLeft: -2
   },
-  lowerPrimary2: {
+  image1_imageStyle: {},
+  diversity: {
     fontFamily: "roboto-700",
     color: "rgba(255,255,255,1)",
-    fontSize: 26,
+    width: 210,
     height: 43,
-    width: 286,
-    marginTop: 30,
-    marginLeft: 20
+    fontSize: 30,
+    marginTop: 35,
+    marginLeft: 34
   },
-  topicSelection2: {
-    fontFamily: "roboto-regular",
-    color: "rgba(67,67,67,1)",
-    top: 20,
-    marginLeft: 20,
-    fontSize: 18,
-    marginRight: 20,
-    flex: 1
-    
-  },
-  lowerPrimary1: {
-    fontFamily: "roboto-700",
+  upperPrimary5: {
+    fontFamily: "roboto-500",
     color: "rgba(255,255,255,1)",
-    fontSize: 20,
-    height: 35,
-    width: 286,
-    marginTop: 12,
-    marginLeft: 20
+    width: 245,
+    height: 37,
+    fontSize: 19,
+    marginTop: 11,
+    marginLeft: 34
   },
-  rect2: {
-    top: 148,
-    left: 0,
-    height: 83,
+  loremIpsum: {
+    top: 26,
+    left: 13,
     position: "absolute",
-    backgroundColor: "rgba(255,255,255,1)",
-    borderRadius: 43,
-    right: 0
+    fontFamily: "roboto-regular",
+    color: "#121212"
   },
-  rect1Stack: {
-    height: 231,
-    marginLeft: -3,
-    marginRight: -4
-  },
-  topicSelection: {
+  learningOutcomes: {
+    top: 0,
+    left: 0,
+    position: "absolute",
     fontFamily: "roboto-700",
-    color: "rgba(67,67,67,1)",
-    fontSize: 23,
-    height: 35,
-    width: 298,
-    marginTop: 8,
-    marginLeft: 20
+    color: "rgba(112,112,112,1)",
+    fontSize: 29
   },
+  loremIpsumStack: {
+    width: 255,
+    height: 34,
+    marginTop: 30,
+    marginLeft: 32
+  },
+  placeholderTextLol: {
+    fontFamily: "roboto-regular",
+    color: "rgba(112,112,112,1)",
+    fontSize: 18,
+    marginTop: 26,
+    marginLeft: 47,
+    marginRight: 40
+  },
+  rect: {
+    width: 132,
+    height: 132,
+    backgroundColor: "rgba(198,198,198,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    marginTop: 15,
+    marginLeft: 134
+  }
 });
 
 export default TopicExplaination;
