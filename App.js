@@ -9,6 +9,8 @@ import TopicExplaination from './src/screens/TopicExplaination';
 import MainQuiz from './src/screens/MainQuiz';
 import ChapterSelection from './src/screens/ChapterSelection'
 import Flashcards from './src/screens/Flashcards'
+
+
 const Stack = createStackNavigator();
 const learning = createStackNavigator();
 const Tab = createBottomTabNavigator();
