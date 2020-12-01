@@ -1,4 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
+
+
 import {
   StyleSheet,
   View,
@@ -7,322 +9,252 @@ import {
   Image,
   ImageBackground,
   AsyncStorage
+  
 } from "react-native";
 
+
 function HomeScreen({navigation}) {
-
-const [recentlyOpenedChapter, setData ] =  useState({});
-
-
-  
-  const _storeData = async (data) => {
-
-    
+  const [userData, setData ] =  useState({});
+  const _retrieveData = async () => {
     try {
-        await AsyncStorage.setItem("recentOpen", JSON.stringify(data));
+        const value = JSON.parse(await AsyncStorage.getItem("recentlyOpenedData"))
+       
+        if (value !== null) {
+            // Our data is fetched successfully
+             setData(value)
 
-        
-    } catch (error) {
-        // Error saving data
-    }
-}
-  
-
-
-  
-   const _retrieveData = async () => {
-      try {
-          const value = JSON.parse(await AsyncStorage.getItem("recentOpen"))
-         
-          if (value !== null) {
-              // Our data is fetched successfully
-               setData(value)
-
-              
-               
           }else{
-            setData( {"primary": "no recently opened topics", "chapters":"", "colour":  "rgba(127,127,127,1)", "textcolour": "rgba(255,255,255,1)"})
-          }
-
-         
-      } catch (error) {
-
-        
-          // Error retrieving data
+          setData( {"primary": "no recently opened topics", "colour":  "rgba(127,127,127,1)","topic": "" })
+        }
+      }catch (error) {
+        // Error retrieving data
       }
-      
-  
-  
 
   }
 
-  
-  useEffect(() => {
-    _retrieveData();
-  })
-    
-    
+useEffect(() => {
+ _retrieveData();
+ console.log(userData)
+})
 
-  
-  
-
- 
-
-
-  
   return (
     <View style={styles.container}>
-      <View style={styles.rectStack}>
-        <View style={styles.rect}>
-          <Text style={styles.welcomeTo}>Welcome to</Text>
-          <View style={styles.pocketScienceStack}>
-            <Text style={styles.pocketScience}>Pocket Science,</Text>
-            <Text style={styles.name}>Name</Text>
-          </View>
-        </View>
-        <View style={styles.rect2}></View>
-        <Text style={styles.numberPoints}>Number Points</Text>
-        <TouchableOpacity
-          onPress={() => _storeData({"chapters": "4", "colour": "rgba(239,219,150,1)", "primary": "Upper Primary","textcolour": "rgba(127,127,127,1)"}).then(
-          () => navigation.navigate("TopicSelection",{PrimaryType: "Upper Primary"})
-          )}
-
-        
-          style={styles.button2}
-
-          
-        >
-          
-          <Text style={styles.upperPrimary}>Upper Primary</Text>
-          
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={()=> _storeData({"chapters": "4", "colour": "rgba(125,207,182,1)", "primary": "Lower Primary", "textcolour": "rgba(255,255,255,1)"}).then(() =>  navigation.navigate("TopicSelection",{
-            PrimaryType: "Lower Primary"
-
-            //"rgba(239,219,150,1)"2
-          })
-      
-           ) }
-        
-          style={styles.button}
-        >
-          <Text style={styles.lowerPrimary4}>Lower Primary</Text>
-          <Text style={styles.lowerPrimary5}>4 Chapters</Text>
-        </TouchableOpacity>
-
-        <Image
-          source={require("../assets/images/image_QZKw..png")}
+      <View style={styles.imageRow}>
+        <ImageBackground
+          source={require("../assets/images/image_fNox..png")}
           resizeMode="contain"
           style={styles.image}
-        ></Image>
-        
-        <ImageBackground
-          source={require("../assets/images/image_Y9cR..png")}
-          resizeMode="contain"
-          style={styles.image2}
-          imageStyle={styles.image2_imageStyle}
+          imageStyle={styles.image_imageStyle}
         >
-          <Text style={styles.lowerPrimary8}>4 Chapters</Text>
+          <Text style={styles.loremIpsum2}>5000 Points</Text>
+          <Text style={styles.welcomeTo}>Welcome to</Text>
+          <Text style={styles.pocketScience}>Pocket Science,</Text>
+          <Text style={styles.ethan}>Ethan</Text>
+          <View style={{width: 330,
+                        height: 144,
+                        backgroundColor: userData.colour,
+                        borderWidth: 0,
+                        borderColor: "#000000",
+                        borderRadius: 20,
+                        shadowColor: "rgba(0,0,0,1)",
+                        shadowOffset: {
+                          width: 2,
+                          height: 2
+                        },
+                        elevation: 9,
+                        shadowOpacity: 0.38,
+                        shadowRadius: 3,
+                        marginTop: 62,
+                        alignSelf: "center"}}>
+            <Text style={styles.lowerPrimary}>{userData.primary}</Text>
+            <Text style={styles.diversity}>{userData.topic}</Text>
+            <Text style={styles.recentlyOpened}>Recently Opened</Text>
+          </View>
         </ImageBackground>
+        <Text style={styles.loremIpsum}></Text>
       </View>
-      <View style={styles.rect6Stack}>
-        <View style={ {left: 0,
-                      height: 78,
-                      position: "absolute",
-                      backgroundColor: recentlyOpenedChapter.colour,
-                      borderRadius: 22,
-                      bottom: 9,
-                      right: 0,
-                      }}>
 
-    <Text style={{fontFamily: "roboto-700",fontSize: 23,height: 71, width: 187,marginTop: 7,marginLeft: 49,color: recentlyOpenedChapter.textcolour}}>
       
-      {recentlyOpenedChapter.primary}</Text>
-        </View>
-    <Text style={{top: 49, left: 49,position: "absolute", fontFamily: "roboto-regular",fontSize: 20, height: 38, width: 274,color: recentlyOpenedChapter.textcolour}}>
-      
-      {recentlyOpenedChapter.chapters} Chapters</Text>
+      <View style={styles.rect3Row}>
+        <TouchableOpacity 
+        onPress={() => navigation.navigate("TopicSelection",{PrimaryType: "Lower Primary"})}
+        style={styles.rect3}> 
+
+          <Text style={styles.lowerPrimary2}>Lower{"\n"}Primary</Text>
+          <Text style={styles.upperPrimary2}>4 chapters</Text>
+       
+
+        </TouchableOpacity>
+        <View style={styles.rect3Filler}></View>
+        <TouchableOpacity 
+        onPress={() => navigation.navigate("TopicSelection",{PrimaryType: "Upper Primary"})}
+         style={styles.rect2}>
+          
+          <Text style={styles.upperPrimary}>Upper{"\n"}Primary</Text>
+          <Text style={styles.upperPrimary1}>4 chapters</Text>
+        </TouchableOpacity>
       </View>
-      <Text style={styles.recentlyOpened}>Recently Opened</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "rgba(255,255,255,1)"
   },
-  rect: {
-    top: 0,
-    left: 7,
-    height: 239,
-    position: "absolute",
-    backgroundColor: "rgba(247,142,105,1)",
-    right: 16
+  image: {
+    height: 461,
+    width: 400
+  },
+  image_imageStyle: {},
+  loremIpsum2: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 17,
+    marginTop: 36,
+    marginLeft: 288
   },
   welcomeTo: {
     fontFamily: "roboto-regular",
     color: "rgba(255,255,255,1)",
-    fontSize: 17,
-    height: 32,
-    width: 150,
-    marginTop: 36,
-    marginLeft: 9
+    fontSize: 26,
+    marginLeft: 18
   },
   pocketScience: {
-    top: 0,
-    left: 0,
-    position: "absolute",
     fontFamily: "roboto-700",
     color: "rgba(255,255,255,1)",
-    fontSize: 23,
-    height: 70,
-    width: 187
+    fontSize: 31,
+    marginLeft: 18
   },
-  name: {
-    top: 32,
-    left: 4,
-    position: "absolute",
-    fontFamily: "roboto-regular",
+  ethan: {
+    fontFamily: "roboto-500",
     color: "rgba(255,255,255,1)",
-    fontSize: 20,
-    height: 60,
-    width: 178
+    fontSize: 28,
+    marginLeft: 18
   },
-  pocketScienceStack: {
-    width: 187,
-    height: 92,
-    marginLeft: 5
-  },
-  rect2: {
-    top: 151,
-    left: 4,
-    height: 141,
-    position: "absolute",
-    backgroundColor: "rgba(255,255,255,1)",
-    borderRadius: 100,
-    right: 12
-  },
-  numberPoints: {
-    top: 36,
-    position: "absolute",
-    fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
-    fontSize: 18,
-    height: 32,
-    right: 0,
-    width: 169
-  },
-  button2: {
-    top: 239,
-    width: 158,
-    height: 228,
-    position: "absolute",
-    backgroundColor: "rgba(239,219,150,1)",
-    borderRadius: 22,
-    right: 31
-  },
-  upperPrimary: {
-    fontFamily: "roboto-700",
-    color: "rgba(127,127,127,1)",
-    fontSize: 18,
-    height: 35,
-    width: 125,
-    marginTop: 31,
-    marginLeft: 20
-  },
-  button: {
-    top: 239,
-    left: 23,
-    width: 158,
-    height: 228,
-    position: "absolute",
-    backgroundColor: "rgba(125,207,182,1)",
-    borderRadius: 22
-  },
-  lowerPrimary4: {
-    fontFamily: "roboto-700",
-    color: "rgba(255,255,255,1)",
-    fontSize: 18,
-    height: 35,
-    width: 129,
-    marginTop: 31,
-    marginLeft: 15
-  },
-  lowerPrimary5: {
-    fontFamily: "roboto-regular",
-    color: "rgba(255,255,255,1)",
-    fontSize: 15,
-    height: 27,
-    width: 91,
-    marginLeft: 26
-  },
-  image: {
-    position: "absolute",
-    top: 353,
-    left: 0,
-    height: 114,
-    width: 189
-  },
-  image2: {
-    position: "absolute",
-    top: 305,
-    height: 200,
-    width: 200,
-    right: 13
-  },
-  image2_imageStyle: {},
-  lowerPrimary8: {
-    fontFamily: "roboto-regular",
-    color: "rgba(127,127,127,1)",
-    fontSize: 15,
-    height: 27,
-    width: 94,
-    marginLeft: 56
-  },
-  rectStack: {
-    height: 505,
-    marginLeft: -7,
-    marginRight: -16
-  },
-  rect6: {
-    
+  rect: {
+    width: 330,
+    height: 144,
+    backgroundColor: "rgba(110,171,237,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 2,
+      height: 2
+    },
+    elevation: 9,
+    shadowOpacity: 0.38,
+    shadowRadius: 3,
+    marginTop: 62,
+    alignSelf: "center"
   },
   lowerPrimary: {
     fontFamily: "roboto-700",
     color: "rgba(255,255,255,1)",
-    fontSize: 23,
-    height: 71,
-    width: 187,
-    marginTop: 7,
-    marginLeft: 49
+    fontSize: 30,
+    marginTop: 35,
+    alignSelf: "center"
   },
-  name2: {
-    top: 49,
-    left: 49,
-    position: "absolute",
-    fontFamily: "roboto-regular",
-
-    fontSize: 20,
-    height: 38,
-    width: 274,
-  },
-  rect6Stack: {
-    height: 87,
-    marginTop: 62,
-    marginLeft: 21,
-    marginRight: 15
+  diversity: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 16,
+    marginTop: 9,
+    alignSelf: "center"
   },
   recentlyOpened: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 12,
+    marginTop: 19,
+    marginLeft: 220
+  },
+  loremIpsum: {
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    marginLeft: 203,
+    marginTop: 406
+  },
+  imageRow: {
+    height: 461,
+    flexDirection: "row",
+    marginTop: -11,
+    marginRight: -203
+  },
+  rect3: {
+    width: 160,
+    height: 167,
+    backgroundColor: "rgba(117,170,230,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    marginLeft: -1,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 9,
+    shadowOpacity: 0.16,
+    shadowRadius: 3,
+  },
+  lowerPrimary2: {
     fontFamily: "roboto-700",
-    color: "rgba(123,122,122,1)",
-    fontSize: 21,
-    height: 62,
-    width: 308,
-    marginTop: -149,
-    marginLeft: 16
+    color: "rgba(255,255,255,1)",
+    fontSize: 30,
+    marginTop: 13,
+    marginLeft: 26
+  },
+  upperPrimary2: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 20,
+    marginTop: 23,
+    marginLeft: 32
+  },
+  rect3Filler: {
+    flex: 1,
+    flexDirection: "row"
+  },
+  rect2: {
+    width: 160,
+    height: 167,
+    backgroundColor: "rgba(83,148,223,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 9,
+    shadowOpacity: 0.16,
+    shadowRadius: 3,
+  },
+  upperPrimary: {
+    fontFamily: "roboto-700",
+    color: "rgba(255,255,255,1)",
+    fontSize: 30,
+    marginTop: 13,
+    marginLeft: 26
+  },
+  upperPrimary1: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 20,
+    marginTop: 23,
+    marginLeft: 32
+  },
+  rect3Row: {
+    height: 167,
+    flexDirection: "row",
+    marginTop: 20,
+    marginLeft: 19,
+    marginRight: 19
   }
 });
 
