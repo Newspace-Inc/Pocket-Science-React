@@ -59,7 +59,7 @@ const _storeData = async (data) => {
         <Text style={styles.upperPrimary4}>The {PrimaryType} Syllabus</Text>
       </ImageBackground>
 
-      <FlatList 
+      <FlatList style = {{marginTop: 20}}
     keyExtractor={(item) => item.id}
     data = {Topics}
     renderItem = {({ item }) => (

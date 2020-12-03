@@ -36,7 +36,7 @@ function TopicExplaination({navigation, route}) {
     </ImageBackground>
     <View style={styles.loremIpsumStack}>
       <Text style={styles.loremIpsum}></Text>
-      <Text style={styles.learningOutcomes}>Learning Outcomes</Text>
+      <Text style={styles.learningOutcomes}>Topic Explaination</Text>
     </View>
     <Text style={styles.placeholderTextLol}>{explainationtext}</Text>
     <View style={styles.rect}></View>
