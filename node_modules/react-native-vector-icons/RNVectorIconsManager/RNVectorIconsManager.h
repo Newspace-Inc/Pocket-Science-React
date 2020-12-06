@@ -17,12 +17,6 @@
 #import "RCTLog.h"
 #endif
 
-FOUNDATION_EXPORT NSString *const RNVIErrorDomain;
-
-enum {
-  RNVIGenericError = 1000,
-};
-
 @interface RNVectorIconsManager : NSObject <RCTBridgeModule>
 
 - (NSString *)hexStringFromColor:(UIColor *)color;

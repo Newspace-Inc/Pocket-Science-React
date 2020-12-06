@@ -13,6 +13,7 @@
     "@react-native-async-storage/async-storage": "^1.13.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/material-top-tabs": "^5.3.10",
     "@react-navigation/native": "^5.7.3",
     "@react-navigation/stack": "^5.9.0",
     "react": "16.11.0",
@@ -22,6 +23,7 @@
     "react-native-safe-area-context": "^3.1.6",
     "react-native-screens": "^2.10.1",
     "react-native-swipe-gestures": "^1.0.5",
+    "react-native-tab-view": "^2.15.2",
     "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
