@@ -1,6 +1,6 @@
 
 import React, { Component, useState } from "react";
-import { StyleSheet, View, Text,FlatList, TouchableOpacity, ScrollView } from "react-native";
+import { StyleSheet, View, Text,FlatList, TouchableOpacity, ScrollView, ImageBackground } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Lesson } from "../../App";
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
@@ -95,26 +95,33 @@ const data = require('../Data/MainData.json').mainData
       }}
     >
   <View style = {styles.container}>
-    <View style={styles.rect1Stack}>
-      <View style={styles.rect1}>
-      <Text style={styles.lowerPrimary}>{PrimaryType}</Text>
-      <Text style={styles.syllabus}>Primary School {TopicName}</Text>
-      </View>
-      <View style={styles.rect2}></View>
-    </View>
+  <ImageBackground
+        source={require("../assets/images/image_ZzgH..png")}
+        resizeMode="contain"
+        style={styles.image1}
+        imageStyle={styles.image1_imageStyle}
+      >
+        <Text style={styles.diversity}>{PrimaryType}</Text>
+    <Text style={styles.upperPrimary5}>{PrimaryType} {TopicName} {Chapter}</Text>
+  </ImageBackground>
 
-    <View style = {styles.yellowrec}>
-      <Text style={styles.conceptName}>{conceptValue}</Text>
-    </View>
-    <ScrollView 
-
-        style={styles.scrollView} 
-        contentContainerStyle={styles.contentContainer}
+    
+    
+  <View style={styles.rect2}>
+     
+  <ScrollView 
+      style = {styles.scrollView}
+      contentContainerStyle={styles.contentContainer}
       >
         
-        <Text style={styles.paragraph}>{dataValue}</Text>
+      <View style={styles.rect}></View>
 
-      </ScrollView>
+      <Text style={styles.conceptName}>{conceptValue}</Text>
+      <Text style={styles.conceptName2}>{dataValue}</Text>
+        
+  </ScrollView>
+
+  </View>
     </View>
     </GestureRecognizer>
     );
@@ -123,107 +130,90 @@ const data = require('../Data/MainData.json').mainData
     container: {
       flex: 1
     },
-    rect1: {
-      top: 0,
-      height: 207,
-      position: "absolute",
-      backgroundColor: "rgba(247,142,105,1)",
-      
-      left: 3,
-      right: 4
+    image1: {
+      height: 157,
+      width: 403,
+      marginTop: -7,
+      marginLeft: -2
     },
-    lowerPrimary: {
-      fontFamily: "roboto-700",
-      color: "rgba(255,255,255,1)",
-      fontSize: 26,
-      height: 88,
-      width: 286,
-      marginTop: 30,
-      marginLeft: 20
-    },
+
+  image1_imageStyle: {},
+
+  diversity: {
+    fontFamily: "roboto-700",
+    color: "rgba(255,255,255,1)",
+    width: 210,
+    height: 43,
+    fontSize: 30,
+    marginTop: 25,
+    marginLeft: 34
+  },
+  upperPrimary5: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    width: 350,
+    height: 50,
+    fontSize: 19,
+    marginTop: 11,
+    marginLeft: 34
+  },
     rect2: {
-      top: 148,
-      left: 0,
-      height: 83,
-      position: "absolute",
-      backgroundColor: "rgba(255,255,255,1)",
-      borderRadius: 43,
-      right: 0
+      
+      height: 440,
+      backgroundColor: "rgba(167,167,167,1)",
+      borderWidth: 0,
+      borderColor: "#000000",
+      borderRadius: 18,
+      marginTop: 50,
+      marginLeft: 15,
+      marginRight: 15
     },
-    rect1Stack: {
-      height: 231,
-      marginLeft: -3,
-      marginRight: -4
+    rect1: {
+      width: 336,
+      height: 523,
+      backgroundColor: "rgba(117,170,230,1)",
+      borderWidth: 0,
+      borderColor: "#000000",
+      borderRadius: 18,
+      marginTop: 4,
+      marginLeft: 5
     },
-  
-    syllabus: {
-      fontFamily: "roboto-700",
+    rect: {
+      
+      height: 147,
+      backgroundColor: "rgba(216,214,214,1)",
+      borderWidth: 0,
+      borderColor: "#000000",
+      borderRadius: 17,
+      marginTop: 28,
+      marginLeft: 17,
+      marginRight: 17
+    },
+    conceptName: {
+      fontFamily: "roboto-regular",
       color: "rgba(255,255,255,1)",
-      fontSize: 20,
-      height: 35,
-      width: 286,
-      marginTop: -30,
-      marginLeft: 20
+      fontSize: 23,
+      textAlign: "center",
+      margin: 12
     },
+    conceptName2: {
+      fontFamily: "roboto-regular",
+      color: "rgba(255,255,255,1)",
+      fontSize: 19,
+      textAlign: "left",
+      marginTop: 12,
+      marginLeft: 15,
+      marginRight: 10
+    },
+    scrollView: {
+      height: '20%',
+      margin: 4,
+      alignSelf: 'center',
+      borderRadius: 18,
+      backgroundColor: "rgba(117,170,230,1)"
 
-    yellowrec: {
-        height: 50,
-        backgroundColor: "rgba(255,231,185,1)",
-        marginTop: 0,
-        marginLeft: 10,
-        marginRight: 10
-      },
-      conceptName: {
-        fontFamily: "roboto-regular",
-        color: "#121212",
-        fontSize: 18,
-        marginTop: 10,
-        textAlign: "center",
-        fontWeight: 'bold',
-        marginLeft: 0,
-        marginRight: 0,
-        alignSelf: "center"
-       
-      },
-      info: {
-        
-        position: "absolute",
-        fontFamily: "roboto-regular",
-        color: "#121212",
-        top: 50,
-        left: 5,
-        marginRight: 10,
-        fontSize: 18,
-        marginLeft: 10,
-      },
-
-      /*ScrollView: {
-        top: 0,
-        left: 0,
-        marginRight: 10,
-        height: 400,
-        marginLeft: 10,
-        backgroundColor: "rgba(255,231,185,1)"
-        
-        
-        
-
-      },
-    */
-      paragraph: {
-        margin: 24,
-        fontSize: 18,
-        textAlign: 'left',
-      },
-      scrollView: {
-        height: '20%',
-        width: '95%',
-        marginLeft: 10,
-        marginRight: 10,
-        alignSelf: 'center',
-    
-        backgroundColor: "rgba(255,231,185,1)"
-      },
+      
+    },
       contentContainer: {
         
         paddingBottom: 10
