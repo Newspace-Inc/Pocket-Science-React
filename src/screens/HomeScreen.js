@@ -8,13 +8,19 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
-  AsyncStorage
+  AsyncStorage,
+  Dimensions
   
 } from "react-native";
 
 
 function HomeScreen({navigation}) {
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
   const [userData, setData ] =  useState({});
+
+  console.log(windowHeight)
+  console.log(windowWidth)
   const _retrieveData = async () => {
     try {
         const value = JSON.parse(await AsyncStorage.getItem("recentlyOpenedData"))
@@ -34,7 +40,7 @@ function HomeScreen({navigation}) {
 
 useEffect(() => {
  _retrieveData();
- console.log(userData)
+ 
 })
 
   return (
