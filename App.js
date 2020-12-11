@@ -1,7 +1,8 @@
 
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator, } from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import HomeScreen from "./src/screens/HomeScreen"
 import TopicSelection from "./src/screens/TopicSelection"
 import * as React from 'react';
@@ -10,7 +11,7 @@ import MainQuiz from './src/screens/MainQuiz';
 import ChapterSelection from './src/screens/ChapterSelection'
 import Flashcards from './src/screens/Flashcards'
 
-
+const topTab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
 const learning = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -34,12 +35,19 @@ function App() {
 function Lessons({route}){
   return (
     <Lesson.Provider value={route}>
-    <Tab.Navigator initialRouteName = "TopicExplaination">
-        <Tab.Screen name="TopicExplaination" component={TopicExplaination}/>
-        <Tab.Screen name="topics" component={ChapterSelection} />
+    <topTab.Navigator 
+    tabBarOptions={{
+      labelStyle: {
+        fontSize: 10
+      }
+
+    }}
+    initialRouteName = "Topic Explaination">
+        <Tab.Screen name="Topic Explaination" component={TopicExplaination}/>
+        <Tab.Screen name="subtopics" component={ChapterSelection} />
         <Tab.Screen name="Quiz" component={MainQuiz}/>
 
-      </Tab.Navigator>
+      </topTab.Navigator>
       </Lesson.Provider>
   
   );

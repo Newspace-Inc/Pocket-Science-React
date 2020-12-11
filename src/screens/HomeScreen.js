@@ -57,7 +57,7 @@ useEffect(() => {
           <Text style={styles.pocketScience}>Pocket Science,</Text>
           <Text style={styles.ethan}>Ethan</Text>
           <TouchableOpacity onPress = {() => navigation.navigate("Lessons",{
-      screen: 'TopicExplaination',
+      screen: 'Topic Explaination',
       params: { PrimaryType: userData.primary, TopicName: userData.topic }
       })}
             style={{width: 330,
@@ -99,7 +99,7 @@ useEffect(() => {
         </TouchableOpacity>
         <View style={styles.rect3Filler}></View>
         <TouchableOpacity 
-        onPress={() => navigation.navigate("TopicSelection",{PrimaryType: "Upper Primary"})}
+        onPress={() => navigation.navigate("Topic Selection",{PrimaryType: "Upper Primary"})}
          style={styles.rect2}>
           
           <Text style={styles.upperPrimary}>Upper{"\n"}Primary</Text>
