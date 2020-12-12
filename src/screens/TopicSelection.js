@@ -64,7 +64,7 @@ const _storeData = async (data) => {
     data = {Topics}
     renderItem = {({ item }) => (
       <TouchableOpacity onPress={() => _storeData({"primary": PrimaryType, "colour":  recentlyOpenedColour,"topic": item.topic }).then(() => navigation.navigate("Lessons",{
-      screen: 'TopicExplaination',
+      screen: 'Topic Explaination',
       params: { PrimaryType: PrimaryType, TopicName: item.topic }
       })
       

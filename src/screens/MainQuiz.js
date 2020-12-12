@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, AsyncStorage } from "react-native";
+import { StyleSheet, View, Text, AsyncStorage, ImageBackground } from "react-native";
 import { Lesson } from "../../App";
 
 
@@ -12,13 +12,23 @@ function MainQuiz({navigation, route}) {
     
   return (
     <View style={styles.container}>
-      <View style={styles.rect1Stack}>
-        <View style={styles.rect1}>
-          <Text style={styles.lowerPrimary2}>{PrimaryType}</Text>
-          <Text style={styles.lowerPrimary1}>Primary School {TopicName}</Text>
-        </View>
-        <View style={styles.rect2}></View>
+      <ImageBackground
+      source={require("../assets/images/image_ZzgH..png")}
+      resizeMode="contain"
+      style={styles.image1}
+      imageStyle={styles.image1_imageStyle}
+    >
+      <Text style={styles.diversity}>{TopicName}</Text>
+      <Text style={styles.upperPrimary5}>{PrimaryType} {TopicName}</Text>
+    </ImageBackground>
+
+    <View style={styles.rect}>
+        <Text style={styles.spelling}>Spelling</Text>
       </View>
+      <View style={styles.rect1}>
+        <Text style={styles.multipleChoice}>Multiple Choice Questions</Text>
+      </View>
+      
     </View>
   );
 }
@@ -27,46 +37,67 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  rect1: {
-    top: 0,
-    height: 207,
-    position: "absolute",
-    backgroundColor: "rgba(247,142,105,1)",
-    width: 400,
-    left: 0,
-    right: 0
+  image1: {
+    height: 157,
+    width: 403,
+    marginTop: -7,
+    marginLeft: -2
   },
-  lowerPrimary2: {
+  image1_imageStyle: {},
+  diversity: {
     fontFamily: "roboto-700",
     color: "rgba(255,255,255,1)",
-    fontSize: 26,
+    width: 210,
     height: 43,
-    width: 286,
-    marginTop: 30,
-    marginLeft: 20
+    fontSize: 30,
+    marginTop: 35,
+    marginLeft: 34
   },
-  lowerPrimary1: {
-    fontFamily: "roboto-700",
+  upperPrimary5: {
+    fontFamily: "roboto-500",
     color: "rgba(255,255,255,1)",
-    fontSize: 20,
-    height: 35,
-    width: 286,
-    marginTop: 12,
-    marginLeft: 20
+    width: 245,
+    height: 37,
+    fontSize: 19,
+    marginTop: 11,
+    marginLeft: 34
   },
-  rect2: {
-    top: 148,
-    left: 0,
-    height: 83,
-    position: "absolute",
-    backgroundColor: "rgba(255,255,255,1)",
-    borderRadius: 43,
-    right: 0
+  rect: {
+    width: 337,
+    height: 98,
+    backgroundColor: "rgba(117,170,230,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    marginTop: 80,
+    alignSelf: "center"
   },
-  rect1Stack: {
-    height: 231,
-    marginLeft: -3,
-    marginRight: -4
+  spelling: {
+    fontFamily: "roboto-regular",
+    color: "rgba(255,255,255,1)",
+    fontSize: 35,
+    textAlign: "center",
+    marginTop: 28,
+    marginLeft: 28,
+    marginRight: 27
+  },
+  rect1: {
+    width: 337,
+    height: 98,
+    backgroundColor: "rgba(117,170,230,1)",
+    borderWidth: 0,
+    borderColor: "#000000",
+    borderRadius: 20,
+    marginTop: 63,
+    alignSelf: "center"
+  },
+  multipleChoice: {
+    fontFamily: "roboto-regular",
+    color: "rgba(255,255,255,1)",
+    fontSize: 25,
+    textAlign: "center",
+    marginTop: 34,
+    marginLeft: 25
   }
 });
 

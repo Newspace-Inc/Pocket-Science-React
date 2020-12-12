@@ -99,7 +99,7 @@ useEffect(() => {
         </TouchableOpacity>
         <View style={styles.rect3Filler}></View>
         <TouchableOpacity 
-        onPress={() => navigation.navigate("Topic Selection",{PrimaryType: "Upper Primary"})}
+        onPress={() => navigation.navigate("TopicSelection",{PrimaryType: "Upper Primary"})}
          style={styles.rect2}>
           
           <Text style={styles.upperPrimary}>Upper{"\n"}Primary</Text>
