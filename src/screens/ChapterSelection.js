@@ -45,7 +45,7 @@ const data = require('../Data/MainData.json').mainData
        <Text style={styles.upperPrimary4}>Primary School {TopicName}</Text>
       </ImageBackground>
 
-      <FlatList style = {{marginTop: 20, marginBottom: 40}}
+      <FlatList style = {{marginTop: 20, marginBottom: 0}}
     keyExtractor={(item) => item.id}
     data = {Chapters}
     renderItem = {({ item }) => (
