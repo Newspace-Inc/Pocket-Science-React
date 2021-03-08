@@ -19,8 +19,7 @@ function HomeScreen({navigation}) {
   const windowHeight = Dimensions.get('window').height;
   const [userData, setData ] =  useState({});
 
-  console.log(windowHeight)
-  console.log(windowWidth)
+  
   const _retrieveData = async () => {
     try {
         const value = JSON.parse(await AsyncStorage.getItem("recentlyOpenedData"))

@@ -15,11 +15,22 @@ const topTab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
 const learning = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const homeBottom = createBottomTabNavigator();
 const tabTheme = {...DefaultTheme,colors: {...DefaultTheme.colors, card: 'white', text: 'black', background: 'white' }};
 export const Lesson = React.createContext();
 function App() {
   return (
     <NavigationContainer theme = {tabTheme}>
+      <homeBottom.Navigator initialRouteName = "HomeFunctions">
+        <homeBottom.Screen name="Home" component={homeScreenFunctions} />
+      </homeBottom.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function homeScreenFunctions({route}){
+  return(
+    
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name = "Home" component={HomeScreen} options = {{headerShown: false}}  />
         <Stack.Screen name="TopicSelection" component={TopicSelection} />
@@ -29,8 +40,8 @@ function App() {
       </Stack.Navigator>
 
       
-    </NavigationContainer>
-  );
+    
+  )
 }
 function Lessons({route}){
   return (

@@ -52,8 +52,10 @@ const data = require('../Data/MainData.json').mainData
   const [conceptValue, setconceptValue] = useState(data[index[counter]].concepts);
 
   const onSwipeLeft = (gestureState) => {
+    console.log(index)
     if (counter == index.length-1){
       console.log("reset")
+      
       setCounter(0)
     }else{
       setCounter(counter+1)
