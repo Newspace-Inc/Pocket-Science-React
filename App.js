@@ -2,6 +2,7 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator, } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import HomeScreen from "./src/screens/HomeScreen"
 import TopicSelection from "./src/screens/TopicSelection"
@@ -22,12 +23,16 @@ function App() {
   return (
     <NavigationContainer theme = {tabTheme}>
       <homeBottom.Navigator initialRouteName = "HomeFunctions">
-        <homeBottom.Screen name="Home" component={homeScreenFunctions} />
+        <homeBottom.Screen name="Home" component={homeScreenFunctions}
+        options={{ tabBarIcon: ({ color, size }) => (<MaterialCommunityIcons name="home" color={color} size={size} />),}} />
+        <homeBottom.Screen name="Awards" component={awardsFunctions} />
       </homeBottom.Navigator>
     </NavigationContainer>
   );
 }
+function awardsFunctions({route}){
 
+}
 function homeScreenFunctions({route}){
   return(
     
