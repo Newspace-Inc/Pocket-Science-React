@@ -31,7 +31,7 @@ const data = require('../Data/MainData.json').mainData
   
     //index is all concepts under a topic
   
-  console.log(index)
+  
   
   function getpoint(countvar) {
     points = ''

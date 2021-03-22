@@ -8,6 +8,8 @@ const data = require('../Data/MainData.json').mainData
   
   
   function ChapterSelection({route, navigation}) {
+  
+
   let Chapters = []
   let addedChapters = []
   let chapterid = 0

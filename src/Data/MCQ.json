@@ -1,0 +1,754 @@
+{
+    "questions": [
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "Which of the following is true about aerobic respiration",
+    "option1": "Anaerobic Respiration occurs when there is totally no enough oxygen available.",
+    "option2": "Glucose is not broken down and lactic acid is not produced.",
+    "option3": "More energy is produced ",
+    "answers": "Anaerobic Respiration occurs when there is not enough oxygen available.",
+    "id": 2
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What is photosynthesis?",
+    "option1": "The process which plants convert light energy to get water and carbon dioxide in exchange.",
+    "option2": "The process where plants take in nutrients and water from the soil through their roots",
+    "option3": "The process where plants give off water vapour through the stomata in order to store sugars, water and nutrients",
+    "answers": "The process which plants convert light energy to chemical energy, and get sugars and oxygen in exchange.",
+    "id": 3
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What does the sugar made by the plant during photosynthesis are stored as?",
+    "option1": "protein",
+    "option2": "fats",
+    "option3": "calcium ",
+    "answers": "starch",
+    "id": 4
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "Where are Apex Predators located in the food chain?",
+    "option1": "At the middle of the food chain",
+    "option2": "At the start of the food chain",
+    "option3": "At the middle and end of the food chain",
+    "answers": "At the end of the food chain",
+    "id": 5
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "id": 6
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What do Herbivores consume?",
+    "option1": "Herbivores consumes grasses, fruits, leaves, vegetables, roots and bulbs",
+    "option2": "Herbivores consumes meat",
+    "option3": "Herbivores consume waste",
+    "answers": "Herbivores consumes grasses, fruits, leaves, vegetables, roots and bulbs",
+    "id": 7
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What is the diffrence between a Carnivore and a Herbivore?",
+    "option1": "Carnivores feed on producers but Herbiovores feed on decomposers",
+    "option2": "Most Carnivores have 4 legs but most herbivores do not",
+    "option3": "Carnivores lay eggs but Herbivores do not ",
+    "answers": "Carnivores feed on Herbivores but Herbivores feed on producers",
+    "id": 8
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What are Decomposers?",
+    "option1": "Decomposers are animals that feed on living animals to break them down into simpler substances",
+    "option2": "Decomposers are animals that feed on dead plants or animals, which break down the dead plants and animals into simple substances.",
+    "option3": "Decomposers feed on living plants to return the plant's nutrients back into the environment",
+    "answers": "Decomposers are animals that feed on dead plants or animals, which break down the dead plants and animals into simple substances.",
+    "id": 9
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "Where does Primary energy come from?",
+    "option1": "Primary energy comes from natural resources such as metals, wood, cement, sand",
+    "option2": "Primary energy comes from man-made resources such as plastic, paper, soda, sheet metal, rubber and brass. ",
+    "option3": "Primary energy comes from nutrients found in the soil",
+    "answers": "Primary energy comes from natural resources such as metals, wood, cement, sand",
+    "id": 10
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Energy",
+    "questions": "What is Secondary energy?",
+    "option1": "Secondary Energy is a usable forms of energy which primary energy may be converted into electricity and petrol.",
+    "option2": "Secondary Energy is another form of energy taken from natural resources.",
+    "option3": "Secondary Energy is a by-products of primary energy.",
+    "answers": "Secondary Energy is a usable forms of energy which primary energy may be converted into electricity and petrol.",
+    "id": 11
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following show heredity?",
+    "option1": "A baby learns to crawl",
+    "option2": "A lion cub can run as fast as its mother",
+    "option3": "An adult dog used to eat chicken meat when it was young but no longer does so now",
+    "answers": "A rabbit has brown and white fur like its father",
+    "id": 12
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "At which stage of its life cycle is the mosquito harmful to humans?",
+    "option1": "Egg",
+    "option2": "larva",
+    "option3": "Pupa",
+    "answers": "Adult",
+    "id": 13
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following statements explains how a seedling is different from an adult plant?",
+    "option1": "The adult plant has roots but the seedling does not.",
+    "option2": "The adult plant needs water but the seedling does not.",
+    "option3": "The adult plant does not need oxygen but the seedling does.",
+    "answers": "The adult plant bears flowers but the seedling does not.",
+    "id": 14
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following statement(s) tell(s) us how the mosquito and the mealworm beetle are similar?\na) They lay eggs in water.\nb) Their larvae can move about.\nc) They have a four-stage life cycle.\nd) Their young eat the same type of food as the parents.",
+    "option1": "C only",
+    "option2": "D only",
+    "option3": "A and D only",
+    "answers": "B and C only",
+    "id": 15
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following characteristics are passed down from the parent plant to its young?\na) Size of fruit\nb) Height of plant \nc) Texture of leaves \nd) Colour of flowers",
+    "option1": "A and B only",
+    "option2": "A and C only ",
+    "option3": "B and D only",
+    "answers": "C and D only",
+    "id": 16
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following is not a characteristic of water vapour?",
+    "option1": "It can be compressed.",
+    "option2": "It spreads out in all directions",
+    "option3": "it takes the shape and volume of its containers.",
+    "answers": "It can be seen",
+    "id": 17
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Two beakers, X and Y, were filled with water up to the 500 ml mark.\n\nBeaker X was placed in the freezer for four hours. It was then placed on the left side of a lever balance. Beaker Y was placed on the right side of the lever balance. What would you expect to observe of the lever balance?",
+    "option1": "The balance tilts up and down.",
+    "option2": "The balance tilts to the right.",
+    "option3": "The balance tilts to the left.",
+    "answers": "The balance is straight.",
+    "id": 18
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "A piece of rock sugar hos a mass of 50 g. Susie uses a mortar and pestle to grind the rock sugar powder into powder. What would the mass of the sugar powder be?",
+    "option1": "0 g",
+    "option2": "25 g",
+    "option3": "100 g",
+    "answers": "50 g",
+    "id": 19
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "For which of the following is it impossible to measure the amount of space it occupies?",
+    "option1": "Air",
+    "option2": "Snow",
+    "option3": "Sand",
+    "answers": "Shadow",
+    "id": 20
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Cycles",
+    "questions": "Jenny wanted to store the following four items of equal mass into individual containers. Which of the following items would need the largest container?",
+    "option1": "Glass",
+    "option2": "Rubber",
+    "option3": "Metal",
+    "answers": "Cotton wool",
+    "id": 21
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What is a system?",
+    "option1": "A system is made of one part",
+    "option2": "A system is made up of one type of parts",
+    "option3": "A system is made up of two parts",
+    "answers": "A system is made up of different parts",
+    "id": 22
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What parts can be found in a plant system?",
+    "option1": "Heart, lungs, nose and gullet",
+    "option2": "Carbon Dioxide, Oxygen, Water, Sugar",
+    "option3": "Roots, stems, stem leaves, flowers, fruits and gullet",
+    "answers": "Roots, stems, stem leaves, flowers, fruits and seeds",
+    "id": 23
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What is the purpose of the human digestive system?",
+    "option1": "The digestive system supports the body",
+    "option2": "The digestive system carries digested food, water and oxygen to all parts of the body and carries wastes away from different parts of the body",
+    "option3": "The digestive system enables gaseous exchange between the body and the environment and obtains oxygen from the environment and removes carbon dioxide from the body",
+    "answers": "The digestive system breaks down food into simpler substances and absorbs digested food that is needed by the body",
+    "id": 24
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What organs are circulatory system made of?",
+    "option1": "bones and muscles",
+    "option2": "mouth, gullet, stomach, small intestine and anus.",
+    "option3": "nose, mouth, windpipe, bronchi and lungs.",
+    "answers": "heart, blood vessels and blood",
+    "id": 25
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "Why are the five human systems important to us?",
+    "option1": "Every system can independently enable us to respire",
+    "option2": "Each of the systems allow us to touch and feel objects",
+    "option3": "They are a part of us",
+    "answers": "They work together to keep us alive, and enables us to move around, grow and carry out our daily tasks.",
+    "id": 26
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What system does the Muscular system work with to enable us to move?",
+    "option1": "Circulatory system",
+    "option2": "Respiratory System",
+    "option3": "Digestive System",
+    "answers": "Skeletal System",
+    "id": 27
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What happens to food in the stomach?",
+    "option1": "Digestive juices are added to dissolve the food ",
+    "option2": "The muscles in the walls of the stomach push the food down to the small intestine",
+    "option3": "The blood in the blood vessels transports the digested food to other parts of the body to be converted into energy for life processes",
+    "answers": "Digestive juices are added and muscles around the stomach move and churn the food.",
+    "id": 28
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What is the purpose of the circulatory system?",
+    "option1": "The circulatory system supports the body",
+    "option2": "The circulatory system enables gaseous exchange between the body and the environment and obtains oxygen from the environment and removes carbon dioxide from the body",
+    "option3": "The circulatory system breaks down food into simpler substances and absorbs digested food that is needed by the body",
+    "answers": "The circulatory system carries digested food, water and oxygen to all parts of the body and carries wastes away from different parts of the body",
+    "id": 29
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "What is the main function of a gullet?",
+    "option1": "The muscles in the walls of the gullet carries water, food and oxygen to the rest of the body",
+    "option2": "The walls of the gullet secrete digestive juices to break down the food",
+    "option3": "The gullet absorbs saliva from the mouth",
+    "answers": "The muscles in the walls of the gullet push the food down to the stomach",
+    "id": 30
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Systems",
+    "questions": "Which of the following is false about the large intestine?",
+    "option1": "Water and some minerals are absorbed from the undigested food into the bloodstream",
+    "option2": "Remaining undigested food becomes partially solid and is temporarily stored in the lower part of the large intestine called the rectum.",
+    "option3": "The remaining food that is undigested enters a wider tube called the large intestine. This is shorter but wider than the small intestine.",
+    "answers": "More digestive juices are added and muscles around the large intestine move and churn the food.",
+    "id": 31
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "questions": "What is a magnet?",
+    "option1": "A magnet is an object that can attract or pull things made of plastic",
+    "option2": "A magnet is an object that can attract or pull anything",
+    "option3": "A magnet is an object that can attract things made of fabric",
+    "answers": "A magnet is an object that can attract or pull things made of iron",
+    "id": 32
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "questions": "Which of the following is false about a magnet?",
+    "option1": "All magnets have a North pole and a South pole",
+    "option2": "Magnets attract magnetic materials that are made of iron, steel, nickel and cobalt or their alloys ",
+    "option3": "Two unlike poles attract each other when they are brought into close contact. The poles pull each other together. ",
+    "answers": "Two like poles attract each other when they are brought into close contact. The poles pull each other together. ",
+    "id": 33
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "questions": "Where is of the following is true about a magnet?",
+    "option1": "A magnet has two poles - the north and east pole",
+    "option2": "All metals are magnetic and thus can be attracted by magnets",
+    "option3": "An ordinary object which contains a magnetic material cannot be made into a magnet even if it ",
+    "answers": "A magnet is strongest at its poles",
+    "id": 34
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 35
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 36
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 37
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 38
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 39
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 40
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Interactions",
+    "id": 41
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following is not one of the four main groups of living things?",
+    "option1": "Animals",
+    "option2": "Plants",
+    "option3": "Bacteria  ",
+    "answers": "Insects",
+    "id": 42
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following is not a characteristic of living things?",
+    "option1": "Living things grow",
+    "option2": "Living things reproduce",
+    "option3": "Living things move",
+    "answers": "Living things do not respire",
+    "id": 43
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following is true about bacteria?",
+    "option1": "Bacteria are not living-things",
+    "option2": "Bacteria can be seen with the naked eye",
+    "option3": "Bacteria can only be found on the land",
+    "answers": "Bacteria are micro-organisms.",
+    "id": 44
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which metal is the best for making wires?",
+    "option1": "Iron",
+    "option2": "Steel",
+    "option3": "Aluminum",
+    "answers": "Copper",
+    "id": 45
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following are not sources for materials to form fabric?",
+    "option1": "Animals",
+    "option2": "Synthetic ",
+    "option3": "Sand",
+    "answers": "paper",
+    "id": 46
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Roy has just bought a new potted plant as shown. He concluded that it is a non-flowering plant. Which of the following statements did Roy use to conclude that the plant is non-flowering?",
+    "option1": "The plant has chlorophyll.\n",
+    "option2": "The plant is grown in a pot and not in the soil.",
+    "option3": "The plant does not have any flowers growing on it.",
+    "answers": "The plant has spores on the underside of its leaves",
+    "id": 47
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Mary decided to observe the following characteristics of an animal. \na) Whether it can fly \nb) The number of legs it has\nc) The number of eyes it has \nd) The number of body parts it has\nFrom which of the above would she be able to tell conclusively that the animal is an insect?",
+    "option1": "A and C only ",
+    "option2": "B and C only",
+    "option3": "A, B and C only",
+    "answers": "B and D only",
+    "id": 48
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following statements explains why glass is not suitable for making a raincoat?",
+    "option1": "Glass is strong",
+    "option2": "Glass is waterproof",
+    "option3": "Glass is transparent.",
+    "answers": "Glass is brittle",
+    "id": 49
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Peter wrote down the following statements about plants.\na) Plants are food producers.\nb) Plants can move only their green parts.\nc) All plants reproduce naturally from seeds.\nd) Some plants can photosynthesise even if the leaves are not green\nWhich of the above statements is/are true?\n",
+    "option1": "A and B only",
+    "option2": "A and C only",
+    "option3": "B, C and D only",
+    "answers": "A and D only",
+    "id": 50
+    },
+    {
+    "upper/lowerPrimary": "Lower Primary",
+    "overallTopic": "Diversity",
+    "questions": "Which of the following objects is/are made of material(s) that do(es) not absorb water?\na) Boots\nb) Bottles\nc) Raincoats \nd) Newspapers",
+    "option1": "D only",
+    "option2": "A and C only",
+    "option3": "A and D only",
+    "answers": "A,B and C only",
+    "id": 51
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following is the most suitable method of reproducing an African violet plant?",
+    "option1": "From a seed",
+    "option2": "From a root",
+    "option3": "From an underground stem",
+    "answers": "From a leaf",
+    "id": 52
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following takes place after fertilisation occurs in an animal?",
+    "option1": "The fertilised egg unites with another sperm.",
+    "option2": "The fertilised egg increases in size.",
+    "option3": "The fertilised egg is flushed out of the system.",
+    "answers": "The fertilised egg starts dividing many times.\n",
+    "id": 53
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Animal P, a large flightless bird, became extinct in the 1800s. It wo in nature, had large colourful feathers and laid huge eggs. White following could be the reasons why Animal P became extinct?\n(a) It could not fly.\n(b) It was hunted for its feathers.\n(c) Its docile nature made it easy for killing it.\n(d) Its eggs were eaten by predators and Man.",
+    "option1": "\nA and C only",
+    "option2": "B, C and D only",
+    "option3": "B and D only",
+    "answers": "A, B, C and D",
+    "id": 54
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following are examples of a genetic trait?\n(a) Double eyelids\n(b) Long hair\n(c) Freckles\n(d) Bushy eyebrows",
+    "option1": "A and B only",
+    "option2": "A, B and C only",
+    "option3": "B and D only",
+    "answers": "A, C and D only",
+    "id": 55
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "DNA profiling or genetic fingerprinting is a process whereby samples of DNA are compared. One of its uses is to find out if and how people are related. A DNA sample was obtained from Joseph and compared with four other people. Which of the following people would have a DNA sample that matches closely to Joseph's sample?\n(a) His wife\n(b) His son\n(c) His mother\n(d) His best friend",
+    "option1": "A only",
+    "option2": "A and D only",
+    "option3": "A, B, C and D",
+    "answers": "B and C only",
+    "id": 56
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "What is the main purpose of the testis?",
+    "option1": "It produces heat to keep the sperms warm",
+    "option2": "It directs sperms into the female's body",
+    "option3": "It provides nourishment for the sperms",
+    "answers": "It produces sperms",
+    "id": 57
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following is a charcteristic of plants that pollinate via wind?",
+    "option1": "Have scented flowers",
+    "option2": "Female flowers have big petals and sepals",
+    "option3": "Male parts stay in the flower",
+    "answers": "Have smooth and light pollen",
+    "id": 58
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Which of the following correctly explains how the use of a hand dryer helps us to dry our hands more quickly?\n",
+    "option1": "The hand dryer absorbs the water from our hands.",
+    "option2": "The heat from the hand dryer causes the water on our hands to boil away.",
+    "option3": "The air from the hand dryer enables the water to gather and drip to the ground.",
+    "answers": "The hot air blown out from the hand dryer increases the rate of evaporation of the water.",
+    "id": 59
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "When Mrs Ong stepped out of the air-conditioned taxi, her spectacles became misty. Which of the following processes had taken place?",
+    "option1": "Evaporation",
+    "option2": "Melting",
+    "option3": "Freezing",
+    "answers": "Condensation",
+    "id": 60
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Cycles",
+    "questions": "Elephants spray muddy water on their bodies to keep cool. Which of the following statements explains how this happens?\n",
+    "option1": "The mud gains heat from the Sun instead of from the elephant.",
+    "option2": "The muddy water allows water vapour to condense on the elephant's skin.\n",
+    "option3": "The water forms ice on the elephant's skin.\n",
+    "answers": "When the water evaporates, it removes heat from the elephant's body",
+    "id": 61
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "What will you observe if the plant is placed in a tube of blue-coloured water overnight before the cross-section of its stem is made?",
+    "option1": "Both the xylem and the phloem will be stained blue.",
+    "option2": "Neither the xylem nor the phloem will be stained blue.",
+    "option3": "The phloem will be stained blue",
+    "answers": "The xylem will be stained blue.",
+    "id": 62
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Which of the following would not be found in the transport system of a plant?",
+    "option1": "Food",
+    "option2": "Water",
+    "option3": "Mineral salts",
+    "answers": "Blood",
+    "id": 63
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "There is a thick layer of air present on the surface of the Earth. What is the layer of air known as?",
+    "option1": "Water vapour",
+    "option2": "Nitrogen",
+    "option3": "Wind",
+    "answers": "Atmosphere",
+    "id": 64
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Which of the following statements about nitrogen gas is true?",
+    "option1": "It cannot be seen and does not occupy space",
+    "option2": " It can be compressed and does not have mass.",
+    "option3": "It cannot be compressed and does not change its shape in different containers",
+    "answers": "It has mass and takes up the shape of the whole container that holds it. ",
+    "id": 65
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Sea mammals such as dolphins and whales come out of water every now and then to",
+    "option1": "Hunt for food ",
+    "option2": "Carry out respiration",
+    "option3": "Keep their bodies warm ",
+    "answers": "Breathe in oxygen from the air",
+    "id": 66
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "A diver, who is diving underwater, is equipped with a tank. He must come out of water before____ in the tank is used up.",
+    "option1": "Water vapour",
+    "option2": "Carbon Dioxide",
+    "option3": "Nitrogen",
+    "answers": "Oxygen",
+    "id": 67
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Fish and mammals have different organs for gaseous exchange. However, these organs have some features in common. What are their common features?\n(a) They have dry surfaces.\n(b) They have many blood vessels.\n(c) They have a large surface area.",
+    "option1": "A and C only ",
+    "option2": " A, B and C",
+    "option3": "A and B only",
+    "answers": "B and C only",
+    "id": 68
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Which of the following statements about the air we breathe in (inhaled air) and the air we breathe out (exhaled air) is incorrect?",
+    "option1": "Exhaled air is warmer than inhaled air.",
+    "option2": "Exhaled air has more carbon dioxide than inhaled air.",
+    "option3": "Exhaled air has less oxygen than inhaled air.",
+    "answers": "Exhaled air has less nitrogen than inhaled air.",
+    "id": 69
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "What happens when we yawn?\n(a) We take in more oxygen.\n(b) We breathe more deeply.\n(c) We stop breathing temporarily",
+    "option1": "A and C only ",
+    "option2": "A, B and C\n",
+    "option3": "B and C only",
+    "answers": "A and B only",
+    "id": 70
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Systems",
+    "questions": "Some pins placed near the iron nail are attracted and stick to the nail when the circuit is closed. What will happen to the pins when the switch is switched off?",
+    "option1": "The pins will become rusty",
+    "option2": "The pins will be magnetised",
+    "option3": "The pins will become non-magnetic objects",
+    "answers": "The pins will drop",
+    "id": 71
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "A force can _________\n\n(a)  change the direction of a moving object\n(b) increase the mass of an object\n(c) change the shape of an object\n(d) stop a moving object",
+    "option1": "A, B, C and D",
+    "option2": "A, B and D only",
+    "option3": "A, B and C only",
+    "answers": "A, C and D only",
+    "id": 72
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "When Ali is running. Henry pulls him from his back. What will be the effect of the pull?",
+    "option1": "Ali's mass will reduce.",
+    "option2": "Ali's mass will increase.",
+    "option3": "Ali will run faster.",
+    "answers": "Ali will slow down.",
+    "id": 73
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "A ball is rolling on the ground. When a boy gives the ball a kick in the direction of its movement, the ball will _________________",
+    "option1": "stop moving",
+    "option2": "occupy more space",
+    "option3": " slow down and move in the opposite direction",
+    "answers": "move faster in the same direction",
+    "id": 74
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "Which of the following statements about a force is true?",
+    "option1": "It can be seen but cannot be felt",
+    "option2": "It is always useful",
+    "option3": "It has mass and occupies space",
+    "answers": "It can be felt but cannot be seen",
+    "id": 75
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "Which of the following groups of animals form a population?\n(a) Crabs and lobsters\n(b) Parrots and macaws \n(c) Tadpoles, frogs and toads\n(d) Moths, butterflies and caterpillars",
+    "option1": "A and B only",
+    "option2": " A, B, C and D",
+    "option3": "C and D only",
+    "answers": "None of the above",
+    "id": 76
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "Which of the following statements about the force of attraction between and Earth and objects on the Earth is not true?",
+    "option1": "It is acting on objects all the time",
+    "option2": "It is called the Earth's gravity or the gravitational force of the Earth",
+    "option3": "It pulls objects down towards and centre of the Earth",
+    "answers": "It causes objects on the Earth to have mass",
+    "id": 77
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "What is the force that causes the trolley to move down down the slope my itself?",
+    "option1": "The force of attraction between and Earth and the slope",
+    "option2": "The force of attraction between and slope and the trolley",
+    "option3": "The frictional force between and trolley and the slope",
+    "answers": "The force of attraction between and Earth and the trolley",
+    "id": 78
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "What is the relationship between the amount of force applied to stretch a spring and the length of the spring?",
+    "option1": "No matter how much the force is, the spring always extends to the same length",
+    "option2": "The extension of the spring is not proportional to the amount of the force applied",
+    "option3": "The greater the force applied, the shorter the spring will be",
+    "answers": "The greater the force applied, the longer the spring will be",
+    "id": 79
+    },
+    {
+    "upper/lowerPrimary": "Upper Primary",
+    "overallTopic": "Interactions",
+    "questions": "An object changes its shape when a force is applied to it, and returns to its original shape once the force is removed. The object is made of a material that is ___________",
+    "option1": "brittle",
+    "option2": "shatterproof",
+    "option3": "waterproof",
+    "answers": "elastic",
+    "id": 80
+    }
+    ]
+    }

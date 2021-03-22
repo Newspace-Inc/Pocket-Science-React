@@ -1,13 +1,71 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { StyleSheet, View, Text, AsyncStorage, ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Lesson } from "../../App";
+const data = require('../Data/MCQ.json').questions
 
 function MCQ({navigation, route}) {
-    
     const {PrimaryType} = route.params;
     const {TopicName} = route.params;
+    var quesData = []
+    var totalQ = 0
+    for (var i = 0; i <= data.length-1; i++){
+        if (data[i][`upper/lowerPrimary`].toLowerCase() == PrimaryType.toLowerCase() && (data[i].overallTopic).startsWith(TopicName)){
+            var usedPos = []
+            var pos;
+            var options = [0,0,0,0]
+            var counter = 0
+            var correctAns;
+            totalQ += 1
+            console.log(totalQ)
+            while(usedPos.length < 4){
+               pos =  Math.floor((Math.random() * 4))
+               
+               if (!usedPos.includes(pos)) {
+                   usedPos.push(pos)
+                   if (counter < 3){
+                    options[pos] = data[i][`option${counter+1}`]
+                   }else{
+                    options[pos] = data[i].answers
+                    correctAns = pos
+                   }
+                   
+                   counter += 1
+                }
+              
+                
+
+            }
+           
+          
+            
+            quesData.push({"Q":data[i].questions,
+                          "1":options[0],
+                          "2":options[1],
+                          "3":options[2],
+                          "4":options[3],
+                          "correctOption": correctAns})
+
+        }
+
+    }
     
+    
+    const[currquesNo, setcurrquesNo] = useState(0)
+    
+    function checkAns(ans){
+      if (ans == quesData[currquesNo].correctOption){
+        ohighlightW = 0
+        ohighligjtR = quesData[currquesNo].correctOption
+          
+      }else{
+
+        ohighlightW = ans
+        ohighlightR = quesData[currquesNo].correctOption
+
+      }
+  
+    }
     
     return (
         <View style={styles.container}>
@@ -20,6 +78,27 @@ function MCQ({navigation, route}) {
           <Text style={styles.diversity}>{TopicName}</Text>
           <Text style={styles.upperPrimary5}>{PrimaryType} {TopicName}</Text>
         </ImageBackground>
+
+        <View style={styles.rect1}>
+          <Text style={styles.loremIpsum}>{currquesNo}/{totalQ}</Text>
+      </View>
+      <View style={styles.rect}>
+        <Text style={styles.question}>{quesData[currquesNo].Q}</Text>
+      </View>
+      
+      <TouchableOpacity onPress={() => checkAns(0)}
+      style={styles.rect2}>
+          <Text style={styles.option1}>{quesData[currquesNo][1]}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => checkAns(1)} style={styles.rect3}>
+         <Text style={styles.option2}>{quesData[currquesNo][2]}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => checkAns(2)} style={styles.rect4}>
+         <Text style={styles.option3}>{quesData[currquesNo][3]}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => checkAns(3)} style={styles.rect5}>
+        <Text style={styles.option4}>{quesData[currquesNo][4]}</Text>
+      </TouchableOpacity>
         </View>
 
 )
@@ -52,6 +131,93 @@ const styles = StyleSheet.create({
       fontSize: 19,
       marginTop: 11,
       marginLeft: 34
+    },
+
+    rect: {
+      width: 342,
+      height: 80,
+      backgroundColor: "rgba(211,205,205,1)",
+      borderRadius: 14,
+      marginTop: 10,
+      marginLeft: 25
+    },
+    question: {
+      fontFamily: "roboto-regular",
+      color: "#121212",
+      marginTop: 10,
+      marginLeft: 15
+    },
+    rect1: {
+      width: 55,
+      height: 27,
+      backgroundColor: "rgba(211,205,205,1)",
+      borderRadius: 11,
+      marginTop: 20,
+      marginLeft: 25
+    },
+    loremIpsum: {
+      fontFamily: "helvetica-regular",
+      color: "#121212",
+      fontSize: 15,
+      marginTop: 3,
+      marginLeft: 12
+    },
+    rect2: {
+      width: 342,
+      height: 42,
+      backgroundColor: "rgba(204,198,198,1)",
+      borderRadius: 14,
+      marginTop: 20,
+      alignSelf: "center"
+    },
+    option1: {
+      fontFamily: "roboto-regular",
+      color: "#121212",
+      marginTop: 10,
+      alignSelf: "center"
+    },
+    rect3: {
+      width: 342,
+      height: 42,
+      borderRadius: 14,
+      backgroundColor: "rgba(204,198,198,1)",
+      marginTop: 15,
+      alignSelf: "center"
+    },
+    option2: {
+      fontFamily: "roboto-regular",
+      color: "#121212",
+      marginTop: 10,
+      alignSelf: "center"
+    },
+    rect4: {
+      width: 342,
+      height: 42,
+      backgroundColor: "rgba(204,198,198,1)",
+      borderRadius: 14,
+      marginTop: 15,
+      
+      alignSelf: "center"
+    },
+    option3: {
+      fontFamily: "roboto-regular",
+      color: "#121212",
+      marginTop: 10,
+      alignSelf: "center"
+    },
+    rect5: {
+      width: 342,
+      height: 42,
+      backgroundColor: "rgba(204,198,198,1)",
+      borderRadius: 14,
+      marginTop: 15,
+      alignSelf: "center"
+    },
+    option4: {
+      fontFamily: "roboto-regular",
+      color: "#121212",
+      marginTop: 10,
+      alignSelf: "center"
     }
 })
 export default MCQ
