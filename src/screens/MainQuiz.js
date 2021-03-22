@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, AsyncStorage, ImageBackground } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { Lesson } from "../../App";
 
 
 
 function MainQuiz({navigation, route}) {
     const network = React.useContext(Lesson);
-    console.log(network.params.params)
+    
     const {PrimaryType} = network.params.params;
     const {TopicName} = network.params.params;
-    
+    console.log(PrimaryType)
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -25,9 +26,17 @@ function MainQuiz({navigation, route}) {
     <View style={styles.rect}>
         <Text style={styles.spelling}>Spelling</Text>
       </View>
-      <View style={styles.rect1}>
+    
+      <TouchableOpacity onPress = {() => navigation.navigate("MCQ",{
+        
+      PrimaryType: PrimaryType, 
+      TopicName: TopicName 
+      })}
+
+      style={styles.rect1}
+      >
         <Text style={styles.multipleChoice}>Multiple Choice Questions</Text>
-      </View>
+      </TouchableOpacity>
       
     </View>
   );

@@ -16,7 +16,7 @@ function TopicSelection({route, navigation}) {
 const _storeData = async (data) => {
   try {
     await AsyncStorage.setItem("recentlyOpenedData", JSON.stringify(data));
-    console.log('done')
+    
 
     
 } catch (error) {

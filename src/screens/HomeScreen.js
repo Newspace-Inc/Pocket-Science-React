@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 
-
+// Height: 737, Width: 392
 import {
   StyleSheet,
   View,
@@ -15,8 +15,9 @@ import {
 
 
 function HomeScreen({navigation}) {
-  const windowWidth = Dimensions.get('window').width;
+  const windowWidth = Dimensions.get('window').width; 
   const windowHeight = Dimensions.get('window').height;
+ 
   const [userData, setData ] =  useState({});
 
   

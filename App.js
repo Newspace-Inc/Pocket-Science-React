@@ -11,12 +11,15 @@ import TopicExplaination from './src/screens/TopicExplaination';
 import MainQuiz from './src/screens/MainQuiz';
 import ChapterSelection from './src/screens/ChapterSelection'
 import Flashcards from './src/screens/Flashcards'
+import MCQ from './src/screens/MCQ'
 
 const topTab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
 const learning = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const homeBottom = createBottomTabNavigator();
+const quizzes = createStackNavigator();
+
 const tabTheme = {...DefaultTheme,colors: {...DefaultTheme.colors, card: 'white', text: 'black', background: 'white' }};
 export const Lesson = React.createContext();
 function App() {
@@ -60,8 +63,8 @@ function Lessons({route}){
     }}
     initialRouteName = "Topic Explaination">
         <Tab.Screen name="Topic Explaination" component={TopicExplaination}/>
-        <Tab.Screen name="subtopics" component={ChapterSelection} />
-        <Tab.Screen name="Quiz" component={MainQuiz}/>
+        <Tab.Screen name="Subtopics" component={ChapterSelection} />
+        <Tab.Screen name="Quiz" component={Quizzes}/>
 
       </topTab.Navigator>
       </Lesson.Provider>
@@ -69,6 +72,18 @@ function Lessons({route}){
   );
 }
 
+function Quizzes({route}){
+  return(
+
+    <quizzes.Navigator initialRouteName = "QuizTypeSelect">
+      <quizzes.Screen name = "QuizTypeSelect" component = {MainQuiz}/>
+      <quizzes.Screen name = "MCQ" component = {MCQ}/>
+
+
+    </quizzes.Navigator>
+  );
+
+}
 function Topics({route}){
   return (
     
