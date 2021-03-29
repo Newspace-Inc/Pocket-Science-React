@@ -28,6 +28,10 @@ function MCQ({navigation, route}) {
                    }else{
                     options[pos] = data[i].answers
                     correctAns = pos
+                    
+                     
+                    
+
                    }
                    
                    counter += 1
@@ -42,6 +46,8 @@ function MCQ({navigation, route}) {
                           "correctOption": correctAns})
                         }
                       }
+
+            console.log(quesData)
     
     
     const[currquesNo, setcurrquesNo] = useState(0)
@@ -105,16 +111,16 @@ function MCQ({navigation, route}) {
       
       <TouchableOpacity onPress={() => checkAns(0)}
       style={[styles.rect2, style1]}>
-          <Text style={styles.option1}>{quesData[currquesNo][1]}</Text>
+          <Text style={styles.option1}>{quesData[currquesNo]["1"]}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => checkAns(1)} style={[styles.rect3,style2]}>
-         <Text style={styles.option2}>{quesData[currquesNo][2]}</Text>
+         <Text style={styles.option2}>{quesData[currquesNo]["2"]}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => checkAns(2)} style={[styles.rect4,style3]}>
-         <Text style={styles.option3}>{quesData[currquesNo][3]}</Text>
+         <Text style={styles.option3}>{quesData[currquesNo]["3"]}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => checkAns(3)} style={[styles.rect5, style4]}>
-        <Text style={styles.option4}>{quesData[currquesNo][4]}</Text>
+        <Text style={styles.option4}>{quesData[currquesNo]["4"]}</Text>
       </TouchableOpacity>
         </View>
 
