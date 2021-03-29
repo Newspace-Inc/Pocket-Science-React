@@ -32,23 +32,16 @@ function MCQ({navigation, route}) {
                    
                    counter += 1
                 }
-              
-                
-
-            }
+              }
            
-          
-            
-            quesData.push({"Q":data[i].questions,
+          quesData.push({"Q":data[i].questions,
                           "1":options[0],
                           "2":options[1],
                           "3":options[2],
                           "4":options[3],
                           "correctOption": correctAns})
-
-        }
-
-    }
+                        }
+                      }
     
     
     const[currquesNo, setcurrquesNo] = useState(0)
@@ -77,6 +70,7 @@ function MCQ({navigation, route}) {
   
     }
 
+    
     const style1 = {
       backgroundColor: colourop[0]
       }
@@ -89,7 +83,7 @@ function MCQ({navigation, route}) {
     const style4 = {
       backgroundColor: colourop[3]
       }
-    
+      console.log(style1)
     return (
         <View style={styles.container}>
           <ImageBackground
@@ -116,7 +110,7 @@ function MCQ({navigation, route}) {
       <TouchableOpacity onPress={() => checkAns(1)} style={[styles.rect3,style2]}>
          <Text style={styles.option2}>{quesData[currquesNo][2]}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => checkAns(2)} style={[styles.rect4,, style3]}>
+      <TouchableOpacity onPress={() => checkAns(2)} style={[styles.rect4,style3]}>
          <Text style={styles.option3}>{quesData[currquesNo][3]}</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => checkAns(3)} style={[styles.rect5, style4]}>
