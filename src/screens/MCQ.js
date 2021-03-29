@@ -52,20 +52,43 @@ function MCQ({navigation, route}) {
     
     
     const[currquesNo, setcurrquesNo] = useState(0)
+    const[colourop, setcolourop] = useState(["rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)"])
     
     function checkAns(ans){
+      var colourList = colourop
       if (ans == quesData[currquesNo].correctOption){
         ohighlightW = 0
-        ohighligjtR = quesData[currquesNo].correctOption
+        ohighlightR = quesData[currquesNo].correctOption
+        
+        colourList[ans] = "rgb(144, 205, 183)"
           
       }else{
 
         ohighlightW = ans
         ohighlightR = quesData[currquesNo].correctOption
+        colourList = colourop
+        colourList[ohighlightR] = "rgb(144, 205, 183)"
+        colourList[ans] = "rgb(247, 128, 128)"
 
       }
+      setcolourop(colourList)
+      console.log(colourop)
+
   
     }
+
+    const style1 = {
+      backgroundColor: colourop[0]
+      }
+    const style2 = {
+      backgroundColor: colourop[1]
+      }
+    const style3 = {
+      backgroundColor: colourop[2]
+      }
+    const style4 = {
+      backgroundColor: colourop[3]
+      }
     
     return (
         <View style={styles.container}>
@@ -87,16 +110,16 @@ function MCQ({navigation, route}) {
       </View>
       
       <TouchableOpacity onPress={() => checkAns(0)}
-      style={styles.rect2}>
+      style={[styles.rect2, style1]}>
           <Text style={styles.option1}>{quesData[currquesNo][1]}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => checkAns(1)} style={styles.rect3}>
+      <TouchableOpacity onPress={() => checkAns(1)} style={[styles.rect3,style2]}>
          <Text style={styles.option2}>{quesData[currquesNo][2]}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => checkAns(2)} style={styles.rect4}>
+      <TouchableOpacity onPress={() => checkAns(2)} style={[styles.rect4,, style3]}>
          <Text style={styles.option3}>{quesData[currquesNo][3]}</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => checkAns(3)} style={styles.rect5}>
+      <TouchableOpacity onPress={() => checkAns(3)} style={[styles.rect5, style4]}>
         <Text style={styles.option4}>{quesData[currquesNo][4]}</Text>
       </TouchableOpacity>
         </View>
@@ -165,7 +188,7 @@ const styles = StyleSheet.create({
     rect2: {
       width: 342,
       height: 42,
-      backgroundColor: "rgba(204,198,198,1)",
+      
       borderRadius: 14,
       marginTop: 20,
       alignSelf: "center"
@@ -180,7 +203,7 @@ const styles = StyleSheet.create({
       width: 342,
       height: 42,
       borderRadius: 14,
-      backgroundColor: "rgba(204,198,198,1)",
+      
       marginTop: 15,
       alignSelf: "center"
     },
@@ -193,7 +216,7 @@ const styles = StyleSheet.create({
     rect4: {
       width: 342,
       height: 42,
-      backgroundColor: "rgba(204,198,198,1)",
+      
       borderRadius: 14,
       marginTop: 15,
       
@@ -208,7 +231,7 @@ const styles = StyleSheet.create({
     rect5: {
       width: 342,
       height: 42,
-      backgroundColor: "rgba(204,198,198,1)",
+      
       borderRadius: 14,
       marginTop: 15,
       alignSelf: "center"
