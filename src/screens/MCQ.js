@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import { StyleSheet, View, Text, AsyncStorage, ImageBackground } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { ReloadInstructions } from "react-native/Libraries/NewAppScreen";
 import { Lesson } from "../../App";
 const data = require('../Data/MCQ.json').questions
 
@@ -54,7 +55,7 @@ function MCQ({navigation, route}) {
     const[colourop, setcolourop] = useState(["rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)"])
     
     function checkAns(ans){
-      var colourList = colourop
+      var colourList = [...colourop]
       if (ans == quesData[currquesNo].correctOption){
         ohighlightW = 0
         ohighlightR = quesData[currquesNo].correctOption
@@ -71,22 +72,24 @@ function MCQ({navigation, route}) {
 
       }
       setcolourop(colourList)
+      
       console.log(colourop)
+      
 
   
     }
 
     
-    const style1 = {
+    var style1 = {
       backgroundColor: colourop[0]
       }
-    const style2 = {
+    var style2 = {
       backgroundColor: colourop[1]
       }
-    const style3 = {
+    var style3 = {
       backgroundColor: colourop[2]
       }
-    const style4 = {
+    var style4 = {
       backgroundColor: colourop[3]
       }
       console.log(style1)

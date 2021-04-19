@@ -34,7 +34,7 @@ function App() {
   );
 }
 function awardsFunctions({route}){
-
+return({});
 }
 function homeScreenFunctions({route}){
   return(
