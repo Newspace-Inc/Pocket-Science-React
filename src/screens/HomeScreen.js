@@ -48,7 +48,7 @@ useEffect(() => {
       <View style={styles.imageRow}>
         <ImageBackground
           source={require("../assets/images/image_fNox..png")}
-          resizeMode="contain"
+          resizeMode="stretch"
           style={styles.image}
           imageStyle={styles.image_imageStyle}
         >
@@ -116,12 +116,13 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,1)"
   },
   image: {
-    height: 461,
-    width: 400
+    height: (Dimensions.get('window').height/100)*60,
+    width: Dimensions.get('window').width,
+    
   },
   image_imageStyle: {},
   loremIpsum2: {
-    fontFamily: "roboto-500",
+    fontFamily: "roboto-500", 
     color: "rgba(255,255,255,1)",
     fontSize: 17,
     marginTop: 36,
