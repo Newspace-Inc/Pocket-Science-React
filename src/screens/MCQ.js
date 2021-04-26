@@ -56,17 +56,14 @@ function MCQ({navigation, route}) {
     
     function checkAns(ans){
       var colourList = [...colourop]
+      
+      var ohighlightR = quesData[currquesNo].correctOption
       if (ans == quesData[currquesNo].correctOption){
-        ohighlightW = 0
-        ohighlightR = quesData[currquesNo].correctOption
         
         colourList[ans] = "rgb(144, 205, 183)"
           
       }else{
-
-        ohighlightW = ans
-        ohighlightR = quesData[currquesNo].correctOption
-        colourList = colourop
+        
         colourList[ohighlightR] = "rgb(144, 205, 183)"
         colourList[ans] = "rgb(247, 128, 128)"
 
