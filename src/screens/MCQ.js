@@ -47,7 +47,7 @@ function MCQ({navigation, route}) {
     const {PrimaryType} = route.params;
     const {TopicName} = route.params;
 
-    const [mcqData, setmcqData] = useState([])
+    const [mcqData, setmcqData] = useState(["test"])
     const[currquesNo, setcurrquesNo] = useState(0)
     const[colourop, setcolourop] = useState(["rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)","rgba(204,198,198,1)"])
     
