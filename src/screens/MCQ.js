@@ -107,7 +107,7 @@ function MCQ({navigation, route}) {
         </ImageBackground>
 
         <View style={styles.rect1}>
-          <Text style={styles.loremIpsum}>{currquesNo}/10</Text>
+          <Text style={styles.loremIpsum}>{currquesNo+1}/10</Text>
       </View>
       <View style={styles.rect}>
         <Text style={styles.question}>{mcqData[currquesNo].Q}</Text>
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
       height: 27,
       backgroundColor: "rgba(211,205,205,1)",
       borderRadius: 11,
-      marginTop: 20,
+      marginTop: 15,
       marginLeft: 25
     },
     loremIpsum: {
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
       height: 42,
       
       borderRadius: 14,
-      marginTop: 20,
+      marginTop: 15,
       alignSelf: "center"
     },
     option1: {
