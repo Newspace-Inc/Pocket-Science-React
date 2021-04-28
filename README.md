@@ -1,4 +1,5 @@
-# Pocket Science (React Native)
+![Pocket-Science-React](https://socialify.git.ci/Newspace-Inc/Pocket-Science-React/image?language=1&owner=1&theme=Light)  
+# Pocket Science
 
 Pocket Science hopes to help primary school students are struggling with remembering keywords for their science exams. As such, we decided to help them study by consolidating the all keywords in one app sorted by chapters
 
